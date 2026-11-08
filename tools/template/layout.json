@@ -599,52 +599,112 @@
    "nodes": {
     "Clip 1 · total frames · 5 + 17n": {
      "pos": [
-      30,
-      910
+      0,
+      0
      ],
      "size": [
-      500,
+      400,
       90
      ]
     },
     "Clip 2 · NEW frames · multiple of 17": {
      "pos": [
-      1280,
-      910
+      0,
+      180
      ],
      "size": [
-      500,
+      400,
       90
      ]
     },
     "Clip 3 · NEW frames · multiple of 17": {
      "pos": [
-      2530,
-      910
+      0,
+      360
      ],
      "size": [
-      500,
+      400,
       90
      ]
     },
     "Planned song duration · H3 40 Hz": {
      "pos": [
-      2750,
-      1000
+      600,
+      950
      ],
      "size": [
       470,
       168
      ]
+    },
+    "Timing · d1": {
+     "pos": [
+      600,
+      0
+     ],
+     "size": [
+      300,
+      130
+     ]
+    },
+    "Timing · d2": {
+     "pos": [
+      600,
+      180
+     ],
+     "size": [
+      300,
+      130
+     ]
+    },
+    "Timing · d3": {
+     "pos": [
+      600,
+      360
+     ],
+     "size": [
+      300,
+      130
+     ]
+    },
+    "Timing · e2": {
+     "pos": [
+      600,
+      540
+     ],
+     "size": [
+      300,
+      130
+     ]
+    },
+    "Timing · e3": {
+     "pos": [
+      600,
+      720
+     ],
+     "size": [
+      300,
+      130
+     ]
+    },
+    "Timing · Markdown table": {
+     "pos": [
+      1000,
+      0
+     ],
+     "size": [
+      460,
+      240
+     ]
     }
    },
    "input": [
-    -188,
-    -24
+    -260,
+    0
    ],
    "output": [
-    60,
-    -64
+    1750,
+    0
    ]
   },
   "Shared H3 · models, size, sampling & audio": {

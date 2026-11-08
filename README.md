@@ -80,6 +80,11 @@ Everything runs at 24 fps, and durations are frame counts:
 - Clips 2 and 3: **new** frames, a positive multiple of 17. Default **119** each.
 - Hidden overlap: `5 + 17n`, at least 5, shared. Default **22**. It adds no runtime.
 
+The core Preview as Text node below the duration controls displays a compact
+text table when run: each clip's duration and end time in the joined
+video, with duplicated overlap removed. Calculations and formatting live
+inside the clip-duration subgraph.
+
 The defaults give 362 frames (~15.08 s). Keep each sampled window within the
 checkpoint's range, normally about 124–362 frames. Invalid timing, and songs
 too short for the plan, fail with a clear error. The song start offset is

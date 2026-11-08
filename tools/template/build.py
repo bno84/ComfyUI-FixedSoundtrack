@@ -198,6 +198,28 @@ for i in range(1, 4):
     link(p+"audio_slice", 1, p+"report", "source")
 
 
+
+# Small, core-only timing report. Continuation durations already exclude overlap.
+for key, expression, sources in [
+    ("timing_d1", "a / 24", [1]),
+    ("timing_d2", "a / 24", [2]),
+    ("timing_d3", "a / 24", [3]),
+    ("timing_e2", "(a + b) / 24", [1, 2]),
+    ("timing_e3", "(a + b + c) / 24", [1, 2, 3]),
+]:
+    node(key, "ComfyMathExpression", f"Timing · {key.removeprefix('timing_')}", 1600, 850,
+         {"expression": expression}, [300, 130])
+    for index, clip in enumerate(sources):
+        link(f"c{clip}_frames", 0, key, f"values.{chr(97+index)}")
+node("timing_format", "StringFormat", "Timing · Markdown table", 1950, 850,
+     {"f_string": 'Clip Duration(s)    End(s)\n   1 {a:>11.3f} {a:>9.3f}\n   2 {b:>11.3f} {d:>9.3f}\n   3 {c:>11.3f} {e:>9.3f}'}, [400, 230])
+for index, key in enumerate(["timing_d1", "timing_d2", "timing_d3", "timing_e2", "timing_e3"]):
+    link(key, 0, "timing_format", f"values.{chr(97+index)}")
+node("timing_preview", "PreviewAny", "Clip timing · 24 fps", 1600, 850,
+     {"preview_mode": False}, [320, 170])
+link("timing_format", 0, "timing_preview", "source")
+
+
 group("05 · JOINED OUTPUT — all 3 clips, one latent decode", 3870, 850, 1150, 1920, "#3e6063")
 node("out_note", "Note", "Output controls", 3910, 920, {"text":
      "The final cumulative AV latent contains all three clips with duplicated context removed. Decode video once. Use original soundtrack defaults ON: mux the continuous trimmed source after video decoding, bypassing audio VAE loss and audio transition seams. OFF uses decoded fixed audio.\n\n"

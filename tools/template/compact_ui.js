@@ -159,7 +159,8 @@ export async function compact(app, layout = null) {
 
   const plan = wrap('Clip durations · GPU audio encoding range', [
     ...original.filter(n => n.type === 'PrimitiveInt' && n.title.startsWith('Clip ')),
-    named('Planned song duration · H3 40 Hz')
+    named('Planned song duration · H3 40 Hz'),
+    ...original.filter(n => n.title.startsWith('Timing · '))
   ]);
   for (let i = 1; i <= 3; i++) {
     const frames = plan.subgraph._nodes.find(n => n.type === 'PrimitiveInt' && n.title.startsWith(`Clip ${i} · `));
@@ -218,6 +219,9 @@ export async function compact(app, layout = null) {
   for (let i = 1; i <= 3; i++) addGroup(`Clip ${i} · references and exposed generation inputs`, [(i-1)*700-15, 1070, 680, 1550], ['#506844','#685340','#604e6e'][i-1]);
   addGroup('Decode and final output', [2100, 0, 730, 1070], '#3e6063');
   if (layout) applyLayout(graph, layout);
+  const timing = graph._nodes.find(n => n.title === 'Clip timing · 24 fps');
+  timing.pos = [plan.node.pos[0], plan.node.pos[1] + plan.node.size[1] + 30];
+  timing.size = [320, 170];
   app.canvas.ds.scale = 0.29;
   app.canvas.ds.offset = [60, 50];
   graph.setDirtyCanvas(true, true);
