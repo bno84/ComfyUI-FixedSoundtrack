@@ -12,6 +12,7 @@
 import argparse
 import json
 from pathlib import Path
+import re
 import urllib.parse
 import urllib.request
 import uuid
@@ -267,8 +268,7 @@ def annotate(workflow, server, version):
 
 
 def fetch(server):
-    import tomllib
-    version = tomllib.loads((PACK / "pyproject.toml").read_text())["project"]["version"]
+    version = re.search(r'^version = "([^"]+)"', (PACK / "pyproject.toml").read_text(), re.M).group(1)
     workflow = json.loads(request(server, "/userdata/" + urllib.parse.quote(f"workflows/{NAME}.json", safe="")))
     annotate(workflow, server, version)
     (PACK / f"example_workflows/{NAME}.json").write_text(json.dumps(workflow, indent=2, ensure_ascii=False) + "\n")

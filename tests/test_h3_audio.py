@@ -11,10 +11,18 @@ import sys
 import unittest
 
 import torch
-from comfy.nested_tensor import NestedTensor
-from comfy.sampler_helpers import prepare_mask
-from comfy_extras.nodes_lt import LTXVConcatAVLatent
-from nodes import SetLatentNoiseMask
+import comfy.options
+
+# Select ComfyUI's CPU mode before model management probes for a GPU.
+comfy.options.enable_args_parsing()
+_argv, sys.argv = sys.argv, [sys.argv[0], "--cpu"]
+import comfy.cli_args  # noqa: E402,F401
+sys.argv = _argv
+
+from comfy.nested_tensor import NestedTensor  # noqa: E402
+from comfy.sampler_helpers import prepare_mask  # noqa: E402
+from comfy_extras.nodes_lt import LTXVConcatAVLatent  # noqa: E402
+from nodes import SetLatentNoiseMask  # noqa: E402
 
 
 def load(name, path):
@@ -95,6 +103,30 @@ class AudioSliceTests(unittest.TestCase):
         mono = {"samples": self.master["samples"][:, :, :1]}
         result, _ = self.node.slice_audio(mono, empty(124), 0, 0, 0)
         torch.testing.assert_close(result["samples"], self.master["samples"][..., :207])
+
+    def test_stereo_lanes_keep_their_order_and_follow_the_window_dtype(self):
+        lanes = torch.stack([torch.arange(1000.0), -torch.arange(1000.0)]).view(1, 1, 2, -1).expand(1, 32, 2, -1)
+        master = {"samples": lanes.to(torch.float64)}
+        window = empty(124)
+        window["samples"].tensors[1].data = window["samples"].tensors[1].to(torch.float16)
+        result, _ = self.node.slice_audio(master, window, 0, 0, 0.05)
+        audio = result["samples"]
+        self.assertEqual(audio.dtype, torch.float16)
+        torch.testing.assert_close(audio, lanes[..., 2:209].to(torch.float16))
+
+    def test_output_does_not_alias_the_master(self):
+        result, _ = self.node.slice_audio(self.master, empty(124), 0, 0, 0)
+        result["samples"].add_(1)
+        torch.testing.assert_close(self.master["samples"][..., :3], torch.arange(3.0).view(1, 1, 1, -1).expand(1, 32, 2, -1))
+
+    def test_rejects_invalid_offsets_and_offsets_past_the_source(self):
+        for offset in [-0.025, float("nan"), float("inf")]:
+            with self.assertRaisesRegex(ValueError, "source_offset_seconds"):
+                self.node.slice_audio(self.master, empty(124), 0, 0, offset)
+        short = {"samples": self.master["samples"][..., :250]}
+        self.node.slice_audio(short, empty(124), 0, 0, 1.075)
+        with self.assertRaisesRegex(ValueError, "too short"):
+            self.node.slice_audio(short, empty(124), 0, 0, 1.1)
 
 
 if __name__ == "__main__":
