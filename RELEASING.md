@@ -21,7 +21,10 @@ Secrets and variables → Actions).
 
 1. Set the new version in `pyproject.toml` (`X.Y.Z`, semantic versioning).
    Commit it, e.g. `build: releases X.Y.Z`.
-2. Create a signed, annotated tag. Its message becomes the Registry changelog:
+2. Push `main`: `git push origin main`. Wait for CI to pass on that exact
+   commit before tagging. If another commit is added, wait for its CI too.
+3. Create a signed, annotated tag on the tested commit. Its message becomes
+   the Registry changelog:
 
    ```bash
    git tag -s vX.Y.Z -m "Short summary
@@ -29,7 +32,8 @@ Secrets and variables → Actions).
    Longer notes for the Registry's Updates section."
    ```
 
-3. Push the commit and the tag: `git push origin main vX.Y.Z`.
+4. Push only the tag: `git push origin vX.Y.Z`. The tag workflow repeats
+   the checks and publishes only after they pass.
 
 ## What CI checks before publishing
 
