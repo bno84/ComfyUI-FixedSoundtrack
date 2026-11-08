@@ -96,6 +96,31 @@ and refuses invalid combinations. It doesn't encode, mask or sample. Apply a
 standard **Set Latent Noise Mask** (zero) and **LTXV Concat AV Latent**
 afterwards, as the template does. Mono encodings are duplicated into stereo.
 
+## Node: Save Video (Fixed Soundtrack)
+
+**video → Save Video (Fixed Soundtrack)** is a drop-in for core **Save Video**
+with the codec choices core lacks, so a song can stay lossless in the output:
+
+| Container | Video | Audio |
+| --- | --- | --- |
+| `mp4`, `mkv` | `h264`, `h265`, `av1` | `flac`, `opus`, `aac` |
+| `webm` | `av1` | `opus` |
+
+- **Quality.** `crf` (-1 uses h264 23, h265 28, av1 30; AV1 0 is lossless), or
+  an average `video_bitrate_kbps` instead. `audio_bitrate_kbps` sets AAC and
+  Opus; FLAC is lossless 24-bit.
+- **Like core.** It takes a `VIDEO` (e.g. from **Create Video**) and keeps its
+  color space (sRGB, HDR HLG or PQ) and, on `auto`, its bit depth. Audio is
+  trimmed to the video. The workflow and prompt are embedded as the same
+  container tags core writes. H.265 in MP4 is tagged `hvc1`.
+- **In-process.** PyAV encodes in ComfyUI's process, as core does: no ffmpeg
+  executable or scratch files. The file is written under a hidden name and
+  renamed when complete, so a cancelled save leaves nothing behind.
+
+Encoders are PyAV's own CPU builds (libx264, libx265, SVT-AV1), not your
+system ffmpeg's. Browsers may not preview H.265 or MKV in the ComfyUI queue;
+the saved file is unaffected.
+
 ## Development
 
 Tests need ComfyUI on `PYTHONPATH` and the continuation pack beside this one in

@@ -85,7 +85,7 @@ jobs:
           python pack/.github/scripts/comfyui_smoke.py comfyui
           --pack ComfyUI-FixedSoundtrack --cnr-id comfyui-fixedsoundtrack
           --dependency comfyui-minimax-h3-continuation=ComfyUI-Minimax-H3-Continuation
-          --node H3AudioTimelineSlice
+          --node H3AudioTimelineSlice --node FixedSoundtrackSaveVideo
           --workflow "pack/example_workflows/FixedSoundtrack - H3 Ref2VA 3 clips.json"
 
   publish:
