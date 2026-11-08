@@ -27,6 +27,14 @@ these files. Edit them, not the JSON.
    Registry pack ID and the Comfy-Org model download links, and writes the
    template and `workflow.api.json`.
 
+## Layout
+
+Node positions and sizes, groups, and which notes stay outside subgraphs come
+from `layout.json`. To change them, arrange the template in ComfyUI, save it
+(or snapshot the open tab with sd-cpp's `comfyui_bridge.py`), then run
+`python3 tools/template/build.py layout WORKFLOW.json` and rebuild. Nodes are
+matched by title; nodes without an entry keep the builder's placement.
+
 `validate.py` runs ComfyUI's prompt validator on `workflow.api.json` without
 sampling. It needs the models and example inputs; `--rename` maps template
 model names to local files.

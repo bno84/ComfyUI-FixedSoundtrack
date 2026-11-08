@@ -1,6 +1,6 @@
 // Reorganize the flat H3 template graph using native subgraphs.
 // Preserves node values and connections; never queues a generation.
-export async function compact(app) {
+export async function compact(app, layout = null) {
   const graph = app.graph;
   if (graph.subgraphs.size) throw new Error('Expected the flat H3 chain; already has subgraphs.');
   const beforePrompt = (await app.graphToPrompt()).output;
@@ -123,7 +123,9 @@ export async function compact(app) {
 
   // Keep native Save Video outside so its dynamic codec/quality controls and
   // render preview remain available without awkward nested dynamic-combo proxies.
-  const outputMembers = [named('Output controls'), ...original.filter(n =>
+  // Notes the layout keeps on the main canvas stay out of the decode subgraph.
+  const outside = new Set(layout?.outside ?? []);
+  const outputMembers = [...(outside.has('Output controls') ? [] : [named('Output controls')]), ...original.filter(n =>
     ['LTXVSeparateAVLatent', 'VAEDecodeTiled', 'VAEDecodeAudio', 'ComfySwitchNode', 'CreateVideo'].includes(n.type))];
   const output = wrap('Decode final video + fixed audio', outputMembers);
   const decoder = find(output.subgraph._nodes, 'VAEDecodeTiled');
@@ -215,11 +217,41 @@ export async function compact(app) {
   addGroup('Shared controls · one seed and one soundtrack', [490, 0, 1550, 930], '#35536e');
   for (let i = 1; i <= 3; i++) addGroup(`Clip ${i} · references and exposed generation inputs`, [(i-1)*700-15, 1070, 680, 1550], ['#506844','#685340','#604e6e'][i-1]);
   addGroup('Decode and final output', [2100, 0, 730, 1070], '#3e6063');
+  if (layout) applyLayout(graph, layout);
   app.canvas.ds.scale = 0.29;
   app.canvas.ds.offset = [60, 50];
   graph.setDirtyCanvas(true, true);
   assertEquivalent(beforePrompt, (await app.graphToPrompt()).output);
   return {shared, clips, output, plan};
+}
+
+// Positions, sizes and groups captured by `build.py layout` from a hand-arranged
+// copy. Nodes are matched by title (subgraph nodes by subgraph name); new nodes
+// keep their default placement.
+function applyLayout(graph, layout) {
+  const place = (nodes, boxes = {}, nameOf = n => n.title) => {
+    for (const n of nodes) {
+      const box = boxes[nameOf(n)];
+      if (box) { n.pos = [...box.pos]; n.size = [...box.size]; }
+    }
+  };
+  place(graph._nodes, layout.nodes, n => n.subgraph?.name ?? n.title);
+  if (layout.groups?.length) {
+    for (const group of [...graph._groups]) graph.remove(group);
+    for (const item of layout.groups) {
+      const g = new LiteGraph.LGraphGroup(item.title);
+      g.pos = item.bounding.slice(0, 2); g.size = item.bounding.slice(2);
+      if (item.color) g.color = item.color;
+      graph.add(g);
+    }
+  }
+  for (const sg of graph.subgraphs.values()) {
+    const saved = layout.subgraphs?.[sg.name];
+    if (!saved) continue;
+    place(sg._nodes, saved.nodes);
+    if (saved.input) sg.inputNode.pos = [...saved.input];
+    if (saved.output) sg.outputNode.pos = [...saved.output];
+  }
 }
 
 export function assertEquivalent(before, after) {

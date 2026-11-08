@@ -41,7 +41,7 @@ export async function build(app) {
   const compactResponse = await fetch('/userdata/workflows%2Ffixedsoundtrack-template.compact.js', {headers: {'Comfy-User': 'default'}});
   if (!compactResponse.ok) throw new Error(`Read subgraph builder: ${compactResponse.status}`);
   const { compact } = await import(URL.createObjectURL(new Blob([await compactResponse.text()], {type: 'text/javascript'})));
-  await compact(app);
+  await compact(app, spec.layout);
   const prompt = await app.graphToPrompt();
   const save = async (name, value) => {
     const r = await fetch('/userdata/' + encodeURIComponent('workflows/' + name) + '?overwrite=true', {

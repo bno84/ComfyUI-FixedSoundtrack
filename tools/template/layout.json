@@ -1,0 +1,823 @@
+{
+ "nodes": {
+  "Shared seed · clip N uses seed + N − 1": {
+   "pos": [
+    1521,
+    132
+   ],
+   "size": [
+    400,
+    110
+   ]
+  },
+  "Your song": {
+   "pos": [
+    1517,
+    308
+   ],
+   "size": [
+    400,
+    180
+   ]
+  },
+  "Clip 1 · <Picture 1> · subject": {
+   "pos": [
+    11,
+    1159
+   ],
+   "size": [
+    310,
+    350
+   ]
+  },
+  "Clip 1 · <Picture 2> · setting": {
+   "pos": [
+    335,
+    1159
+   ],
+   "size": [
+    310,
+    350
+   ]
+  },
+  "Clip 2 · <Picture 1> · subject": {
+   "pos": [
+    707,
+    1157
+   ],
+   "size": [
+    310,
+    350
+   ]
+  },
+  "Clip 2 · <Picture 2> · setting": {
+   "pos": [
+    1030,
+    1156
+   ],
+   "size": [
+    310,
+    350
+   ]
+  },
+  "Clip 3 · <Picture 1> · subject": {
+   "pos": [
+    1415,
+    1157
+   ],
+   "size": [
+    310,
+    350
+   ]
+  },
+  "Clip 3 · <Picture 2> · setting": {
+   "pos": [
+    1737,
+    1155
+   ],
+   "size": [
+    310,
+    350
+   ]
+  },
+  "Save / preview joined music video": {
+   "pos": [
+    2213,
+    596
+   ],
+   "size": [
+    488,
+    403
+   ]
+  },
+  "START HERE": {
+   "pos": [
+    -25,
+    144
+   ],
+   "size": [
+    450,
+    462
+   ]
+  },
+  "Decode final video + fixed audio": {
+   "pos": [
+    2204,
+    125
+   ],
+   "size": [
+    508,
+    334
+   ]
+  },
+  "Clip 1 · Ref2VA initial": {
+   "pos": [
+    0,
+    1570
+   ],
+   "size": [
+    650,
+    1000
+   ]
+  },
+  "Clip 2 · Ref2VA continuation": {
+   "pos": [
+    700,
+    1570
+   ],
+   "size": [
+    650,
+    1000
+   ]
+  },
+  "Clip 3 · Ref2VA continuation": {
+   "pos": [
+    1400,
+    1570
+   ],
+   "size": [
+    650,
+    1000
+   ]
+  },
+  "Clip durations · GPU audio encoding range": {
+   "pos": [
+    1515,
+    593
+   ],
+   "size": [
+    397,
+    211
+   ]
+  },
+  "Shared H3 · models, size, sampling & audio": {
+   "pos": [
+    596,
+    123
+   ],
+   "size": [
+    725,
+    694
+   ]
+  },
+  "Output controls": {
+   "pos": [
+    2933,
+    125
+   ],
+   "size": [
+    476,
+    337
+   ]
+  }
+ },
+ "groups": [
+  {
+   "title": "Shared controls · one seed and one soundtrack",
+   "bounding": [
+    490,
+    0,
+    1550,
+    930
+   ],
+   "color": "#35536e"
+  },
+  {
+   "title": "Clip 1 · references and exposed generation inputs",
+   "bounding": [
+    -15,
+    1070,
+    680,
+    1550
+   ],
+   "color": "#506844"
+  },
+  {
+   "title": "Clip 2 · references and exposed generation inputs",
+   "bounding": [
+    685,
+    1070,
+    680,
+    1550
+   ],
+   "color": "#685340"
+  },
+  {
+   "title": "Clip 3 · references and exposed generation inputs",
+   "bounding": [
+    1385,
+    1070,
+    680,
+    1550
+   ],
+   "color": "#604e6e"
+  },
+  {
+   "title": "Decode and final output",
+   "bounding": [
+    2100,
+    0,
+    730,
+    1070
+   ],
+   "color": "#3e6063"
+  }
+ ],
+ "outside": [
+  "Output controls"
+ ],
+ "subgraphs": {
+  "Decode final video + fixed audio": {
+   "nodes": {
+    "Separate final cumulative AV": {
+     "pos": [
+      3910,
+      1340
+     ],
+     "size": [
+      470,
+      100
+     ]
+    },
+    "Final video · tiled VAE controls": {
+     "pos": [
+      3910,
+      1570
+     ],
+     "size": [
+      470,
+      210
+     ]
+    },
+    "Decode the preserved soundtrack": {
+     "pos": [
+      4460,
+      1570
+     ],
+     "size": [
+      470,
+      110
+     ]
+    },
+    "Final soundtrack · original source ON / decoded audio OFF": {
+     "pos": [
+      4460,
+      1750
+     ],
+     "size": [
+      470,
+      140
+     ]
+    },
+    "Joined video · 24 fps": {
+     "pos": [
+      3910,
+      1930
+     ],
+     "size": [
+      470,
+      200
+     ]
+    }
+   },
+   "input": [
+    3173,
+    1312
+   ],
+   "output": [
+    5317,
+    1404
+   ]
+  },
+  "Clip 1 · Ref2VA initial": {
+   "nodes": {
+    "Clip 1 · Ref2VA prompt & references": {
+     "pos": [
+      30,
+      1710
+     ],
+     "size": [
+      590,
+      610
+     ]
+    },
+    "Clip 1 · exact soundtrack slice + carried audio": {
+     "pos": [
+      30,
+      2420
+     ],
+     "size": [
+      590,
+      220
+     ]
+    },
+    "Clip 1 · standard audio mask": {
+     "pos": [
+      690,
+      2430
+     ],
+     "size": [
+      440,
+      90
+     ]
+    },
+    "Clip 1 · standard AV assembly": {
+     "pos": [
+      690,
+      2600
+     ],
+     "size": [
+      440,
+      100
+     ]
+    },
+    "Clip 1 · CFG-free H3 guidance": {
+     "pos": [
+      30,
+      2790
+     ],
+     "size": [
+      500,
+      90
+     ]
+    },
+    "Clip 1 · sample video with fixed audio": {
+     "pos": [
+      690,
+      2800
+     ],
+     "size": [
+      440,
+      170
+     ]
+    },
+    "Clip 1 · audio timing report": {
+     "pos": [
+      30,
+      3050
+     ],
+     "size": [
+      590,
+      230
+     ]
+    }
+   },
+   "input": [
+    -221,
+    -164
+   ],
+   "output": [
+    60,
+    -34
+   ]
+  },
+  "Clip 2 · Ref2VA continuation": {
+   "nodes": {
+    "Clip 2 · Ref2VA prompt & references": {
+     "pos": [
+      1280,
+      1710
+     ],
+     "size": [
+      590,
+      610
+     ]
+    },
+    "Clip 2 · unchanged upstream window": {
+     "pos": [
+      1920,
+      1710
+     ],
+     "size": [
+      460,
+      210
+     ]
+    },
+    "Clip 2 · preceding AV tail → self-attention": {
+     "pos": [
+      1920,
+      2020
+     ],
+     "size": [
+      460,
+      220
+     ]
+    },
+    "Clip 2 · exact soundtrack slice + carried audio": {
+     "pos": [
+      1280,
+      2420
+     ],
+     "size": [
+      590,
+      220
+     ]
+    },
+    "Clip 2 · standard audio mask": {
+     "pos": [
+      1940,
+      2430
+     ],
+     "size": [
+      440,
+      90
+     ]
+    },
+    "Clip 2 · standard AV assembly": {
+     "pos": [
+      1940,
+      2600
+     ],
+     "size": [
+      440,
+      100
+     ]
+    },
+    "Clip 2 · CFG-free H3 guidance": {
+     "pos": [
+      1280,
+      2790
+     ],
+     "size": [
+      500,
+      90
+     ]
+    },
+    "Clip 2 · sample video with fixed audio": {
+     "pos": [
+      1940,
+      2800
+     ],
+     "size": [
+      440,
+      170
+     ]
+    },
+    "Clip 2 · append only NEW frames": {
+     "pos": [
+      1940,
+      3090
+     ],
+     "size": [
+      440,
+      210
+     ]
+    },
+    "Clip 2 · audio timing report": {
+     "pos": [
+      1280,
+      3050
+     ],
+     "size": [
+      590,
+      230
+     ]
+    }
+   },
+   "input": [
+    -221,
+    -194
+   ],
+   "output": [
+    60,
+    -44
+   ]
+  },
+  "Clip 3 · Ref2VA continuation": {
+   "nodes": {
+    "Clip 3 · Ref2VA prompt & references": {
+     "pos": [
+      2530,
+      1710
+     ],
+     "size": [
+      590,
+      610
+     ]
+    },
+    "Clip 3 · unchanged upstream window": {
+     "pos": [
+      3170,
+      1710
+     ],
+     "size": [
+      460,
+      210
+     ]
+    },
+    "Clip 3 · preceding AV tail → self-attention": {
+     "pos": [
+      3170,
+      2020
+     ],
+     "size": [
+      460,
+      220
+     ]
+    },
+    "Clip 3 · exact soundtrack slice + carried audio": {
+     "pos": [
+      2530,
+      2420
+     ],
+     "size": [
+      590,
+      220
+     ]
+    },
+    "Clip 3 · standard audio mask": {
+     "pos": [
+      3190,
+      2430
+     ],
+     "size": [
+      440,
+      90
+     ]
+    },
+    "Clip 3 · standard AV assembly": {
+     "pos": [
+      3190,
+      2600
+     ],
+     "size": [
+      440,
+      100
+     ]
+    },
+    "Clip 3 · CFG-free H3 guidance": {
+     "pos": [
+      2530,
+      2790
+     ],
+     "size": [
+      500,
+      90
+     ]
+    },
+    "Clip 3 · sample video with fixed audio": {
+     "pos": [
+      3190,
+      2800
+     ],
+     "size": [
+      440,
+      170
+     ]
+    },
+    "Clip 3 · append only NEW frames": {
+     "pos": [
+      3190,
+      3090
+     ],
+     "size": [
+      440,
+      210
+     ]
+    },
+    "Clip 3 · audio timing report": {
+     "pos": [
+      2530,
+      3050
+     ],
+     "size": [
+      590,
+      230
+     ]
+    }
+   },
+   "input": [
+    -221,
+    -194
+   ],
+   "output": [
+    60,
+    -34
+   ]
+  },
+  "Clip durations · GPU audio encoding range": {
+   "nodes": {
+    "Clip 1 · total frames · 5 + 17n": {
+     "pos": [
+      30,
+      910
+     ],
+     "size": [
+      500,
+      90
+     ]
+    },
+    "Clip 2 · NEW frames · multiple of 17": {
+     "pos": [
+      1280,
+      910
+     ],
+     "size": [
+      500,
+      90
+     ]
+    },
+    "Clip 3 · NEW frames · multiple of 17": {
+     "pos": [
+      2530,
+      910
+     ],
+     "size": [
+      500,
+      90
+     ]
+    },
+    "Planned song duration · H3 40 Hz": {
+     "pos": [
+      2750,
+      1000
+     ],
+     "size": [
+      470,
+      168
+     ]
+    }
+   },
+   "input": [
+    -188,
+    -24
+   ],
+   "output": [
+    60,
+    -64
+   ]
+  },
+  "Shared H3 · models, size, sampling & audio": {
+   "nodes": {
+    "Shared H3 model · DaSiWa Hybrid v4 Turbo": {
+     "pos": [
+      690,
+      60
+     ],
+     "size": [
+      510,
+      130
+     ]
+    },
+    "Attention backend": {
+     "pos": [
+      690,
+      260
+     ],
+     "size": [
+      510,
+      100
+     ]
+    },
+    "Shared H3 video / audio shifts": {
+     "pos": [
+      690,
+      430
+     ],
+     "size": [
+      510,
+      140
+     ]
+    },
+    "Shared H3 text / vision encoder": {
+     "pos": [
+      1280,
+      60
+     ],
+     "size": [
+      540,
+      150
+     ]
+    },
+    "Shared H3 video VAE": {
+     "pos": [
+      1280,
+      290
+     ],
+     "size": [
+      540,
+      100
+     ]
+    },
+    "Shared H3 audio VAE": {
+     "pos": [
+      1280,
+      460
+     ],
+     "size": [
+      540,
+      100
+     ]
+    },
+    "Shared width · multiple of 32": {
+     "pos": [
+      1890,
+      60
+     ],
+     "size": [
+      320,
+      90
+     ]
+    },
+    "Shared height · multiple of 32": {
+     "pos": [
+      1890,
+      230
+     ],
+     "size": [
+      320,
+      90
+     ]
+    },
+    "Shared hidden overlap · 5 + 17n frames": {
+     "pos": [
+      1890,
+      400
+     ],
+     "size": [
+      320,
+      90
+     ]
+    },
+    "Shared sampler": {
+     "pos": [
+      2310,
+      60
+     ],
+     "size": [
+      330,
+      90
+     ]
+    },
+    "Shared schedule · full denoise": {
+     "pos": [
+      2310,
+      230
+     ],
+     "size": [
+      330,
+      150
+     ]
+    },
+    "Preserve audio · zero denoise": {
+     "pos": [
+      2310,
+      470
+     ],
+     "size": [
+      330,
+      130
+     ]
+    },
+    "Encode selected song range ONCE": {
+     "pos": [
+      2750,
+      310
+     ],
+     "size": [
+      470,
+      100
+     ]
+    },
+    "Trim song BEFORE GPU encoding": {
+     "pos": [
+      2750,
+      750
+     ],
+     "size": [
+      470,
+      150
+     ]
+    },
+    "Song offset · quantize once to 40 Hz": {
+     "pos": [
+      3300,
+      750
+     ],
+     "size": [
+      470,
+      150
+     ]
+    },
+    "Song start offset · seconds": {
+     "pos": [
+      2750,
+      500
+     ],
+     "size": [
+      470,
+      90
+     ]
+    }
+   },
+   "input": [
+    -188,
+    -44
+   ],
+   "output": [
+    60,
+    -144
+   ]
+  }
+ }
+}

@@ -1,32 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720">
-<rect width="1280" height="720" fill="#202424"/>
-<rect x="40" y="40" width="1200" height="640" rx="52" fill="#242424" stroke="#383838" stroke-width="3"/>
-<rect x="118" y="170" width="1044" height="380" rx="28" fill="#292F2E" stroke="#86C9BB" stroke-width="8"/>
-<path d="M466 170V550 M814 170V550" stroke="#86C9BB" stroke-width="8"/>
-<rect x="146" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="146" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="222" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="222" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="298" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="298" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="374" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="374" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="494" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="494" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="570" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="570" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="646" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="646" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="722" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="722" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="842" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="842" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="918" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="918" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="994" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="994" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="1070" y="194" width="36" height="20" rx="3" fill="#86C9BB"/>
-<rect x="1070" y="506" width="36" height="20" rx="3" fill="#86C9BB"/>
-<path d="M128 448L240 340L326 402L418 294L542 416L662 322L742 382L868 280L1004 406L1080 350L1152 414V478H128Z" fill="#86C9BB" opacity=".10"/>
-<path d="M82 360H182L206 326L236 404L270 298L306 360H530L554 326L584 404L618 298L654 360H878L902 326L932 404L966 298L1002 360H1198" fill="none" stroke="#242424" stroke-width="32" stroke-linejoin="round"/><path d="M82 360H182L206 326L236 404L270 298L306 360H530L554 326L584 404L618 298L654 360H878L902 326L932 404L966 298L1002 360H1198" fill="none" stroke="#86C9BB" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/><path d="M160 604H1120" stroke="#383838" stroke-width="4"/>
-<g fill="#86C9BB"><circle cx="292" cy="604" r="7"/><circle cx="640" cy="604" r="7"/><circle cx="988" cy="604" r="7"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 400 400" role="img" aria-labelledby="title desc">
+  <title id="title">Fixed Soundtrack workflow</title>
+  <desc id="desc">One continuous teal waveform crosses three joined film frames on a full-bleed charcoal background.</desc>
+  <rect width="400" height="400" fill="#242424"/>
+  <g fill="none" stroke="#86C9BB" stroke-width="7" stroke-linejoin="round">
+    <rect x="44" y="108" width="312" height="184" rx="13"/>
+    <path d="M148 108V292 M252 108V292"/>
+  </g>
+  <g fill="#86C9BB">
+    <path d="M62 125h20v11H62z M110 125h20v11h-20z M166 125h20v11h-20z M214 125h20v11h-20z M270 125h20v11h-20z M318 125h20v11h-20z M62 264h20v11H62z M110 264h20v11h-20z M166 264h20v11h-20z M214 264h20v11h-20z M270 264h20v11h-20z M318 264h20v11h-20z"/>
+  </g>
+  <path d="M24 200H67L80 177L97 229L116 160L136 200H171L184 177L201 229L220 160L240 200H275L288 177L305 229L324 160L344 200H376" fill="none" stroke="#242424" stroke-width="23" stroke-linejoin="round"/>
+  <path d="M24 200H67L80 177L97 229L116 160L136 200H171L184 177L201 229L220 160L240 200H275L288 177L305 229L324 160L344 200H376" fill="none" stroke="#86C9BB" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -7,6 +7,11 @@
   python3 tools/template/build.py fetch [--server URL]
       Download the saved graphs, add Registry pack IDs and model download
       links, and write them to example_workflows/ and tools/template/.
+  python3 tools/template/build.py layout WORKFLOW.json
+      Capture node positions and sizes, groups, and notes kept outside
+      subgraphs from a hand-arranged copy of the template (a saved workflow
+      or a comfyui_bridge.py snapshot) into tools/template/layout.json.
+      upload applies it on the next build.
 """
 
 import argparse
@@ -228,8 +233,45 @@ def upload_input(server, path):
     request(server, "/upload/image", body, f"multipart/form-data; boundary={boundary}")
 
 
+# Earlier titles, so layouts arranged on older builds still apply.
+LEGACY_TITLES = {
+    "Replace with your soundtrack": "Your song",
+    "Shared seed · all three clips": "Shared seed · clip N uses seed + N − 1",
+    "Planned soundtrack duration · H3 40 Hz": "Planned song duration · H3 40 Hz",
+    "Shared H3 model · Hybrid v4 Turbo": "Shared H3 model · DaSiWa Hybrid v4 Turbo",
+    "AMD · Comfy Kitchen attention": "Attention backend",
+    "Encode selected soundtrack range ONCE": "Encode selected song range ONCE",
+    "Trim soundtrack BEFORE GPU encoding": "Trim song BEFORE GPU encoding",
+    "Soundtrack offset · quantize once to 40 Hz": "Song offset · quantize once to 40 Hz",
+    "Soundtrack source offset · seconds": "Song start offset · seconds",
+}
+
+
+def capture_layout(path):
+    workflow = json.loads(Path(path).read_text())
+    subgraphs = workflow.get("definitions", {}).get("subgraphs", [])
+    names = {graph["id"]: graph["name"] for graph in subgraphs}
+    box = lambda n: {"pos": [round(v) for v in n["pos"]], "size": [round(v) for v in n["size"]]}  # noqa: E731
+    title = lambda n: LEGACY_TITLES.get(n.get("title"), n.get("title")) or names.get(n["type"])  # noqa: E731
+    layout = {
+        "nodes": {title(n): box(n) for n in workflow["nodes"] if title(n)},
+        "groups": [{"title": g["title"], "bounding": [round(v) for v in g["bounding"]], "color": g.get("color")}
+                   for g in workflow.get("groups", [])],
+        "outside": [n["title"] for n in workflow["nodes"] if n["type"] == "MarkdownNote" and n.get("title") != "START HERE"],
+        "subgraphs": {graph["name"]: {
+            "nodes": {title(n): box(n) for n in graph["nodes"] if title(n)},
+            "input": [round(v) for v in graph["inputNode"]["bounding"][:2]],
+            "output": [round(v) for v in graph["outputNode"]["bounding"][:2]],
+        } for graph in subgraphs},
+    }
+    (HERE / "layout.json").write_text(json.dumps(layout, indent=1, ensure_ascii=False) + "\n")
+    print(f"Wrote tools/template/layout.json ({len(layout['nodes'])} top-level nodes, {len(layout['subgraphs'])} subgraphs)")
+
+
 def upload(server):
-    spec = dict(name=NAME, api_name=API_NAME, nodes=nodes, links=links, groups=groups)
+    layout_path = HERE / "layout.json"
+    layout = json.loads(layout_path.read_text()) if layout_path.exists() else None
+    spec = dict(name=NAME, api_name=API_NAME, nodes=nodes, links=links, groups=groups, layout=layout)
     put_userdata(server, "fixedsoundtrack-template.build.json", json.dumps(spec, indent=2).encode())
     for script in ["build_ui.js", "compact_ui.js"]:
         put_userdata(server, "fixedsoundtrack-template." + script.removesuffix("_ui.js") + ".js", (HERE / script).read_bytes())
@@ -279,7 +321,13 @@ def fetch(server):
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("command", choices=["upload", "fetch"])
+    parser.add_argument("command", choices=["upload", "fetch", "layout"])
+    parser.add_argument("workflow", nargs="?", help="Hand-arranged workflow for the layout command")
     parser.add_argument("--server", default="http://127.0.0.1:8188")
     args = parser.parse_args()
-    {"upload": upload, "fetch": fetch}[args.command](args.server.rstrip("/"))
+    if args.command == "layout":
+        if not args.workflow:
+            parser.error("layout needs WORKFLOW.json")
+        capture_layout(args.workflow)
+    else:
+        {"upload": upload, "fetch": fetch}[args.command](args.server.rstrip("/"))
