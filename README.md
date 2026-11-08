@@ -46,6 +46,8 @@ then write each clip's prompt.
 - **Original audio in the output.** `use_original_soundtrack` (default on)
   muxes the trimmed source after video decoding: no audio VAE loss and no
   seams at clip boundaries. Off uses the decoded audio latent instead.
+- **Saved as H.265 + Opus.** The pack's own **Save Video** writes MP4 at
+  CRF 18 with 128 kbit/s Opus. Choose `flac` there to keep the song lossless.
 - **One seed, distinct noise.** Clip N samples with `seed + N − 1`.
 - **Compact canvas.** Six native subgraphs: shared settings, duration planning,
   one per clip, and decode. Settings are promoted to subgraph inputs, so

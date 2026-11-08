@@ -208,8 +208,10 @@ link("decode_audio", 0, "output_audio", "on_false")
 node("create_video", "CreateVideo", "Joined video · 24 fps", 3910, 1930, {"fps": 24.0, "codec": "none"}, [470, 200])
 link("decode_video", 0, "create_video", "images")
 link("output_audio", 0, "create_video", "audio")
-node("save_video", "SaveVideo", "Save / preview joined music video", 3910, 2270,
-     {"filename_prefix": "video/FixedSoundtrack/h3_three_clips", "format": "mp4", "format.codec": "h264"}, [1020, 380])
+# Opus keeps the song small at near-transparent quality; choose flac to keep it lossless.
+node("save_video", "FixedSoundtrackSaveVideo", "Save / preview joined music video", 3910, 2270,
+     {"filename_prefix": "video/FixedSoundtrack/h3_three_clips", "container": "mp4", "video_codec": "h265",
+      "crf": 18, "audio_codec": "opus", "audio_bitrate_kbps": 128}, [1020, 380])
 link("create_video", 0, "save_video", "video")
 
 

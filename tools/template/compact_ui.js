@@ -121,8 +121,8 @@ export async function compact(app, layout = null) {
     }
   };
 
-  // Keep native Save Video outside so its dynamic codec/quality controls and
-  // render preview remain available without awkward nested dynamic-combo proxies.
+  // Keep Save Video outside so its codec and quality controls and render
+  // preview stay on the main canvas.
   // Notes the layout keeps on the main canvas stay out of the decode subgraph.
   const outside = new Set(layout?.outside ?? []);
   const outputMembers = [...(outside.has('Output controls') ? [] : [named('Output controls')]), ...original.filter(n =>
@@ -203,7 +203,7 @@ export async function compact(app, layout = null) {
   audio.pos = [1600, 250]; audio.size = [400, 180];
   plan.node.pos = [1600, 540]; plan.node.size = [400, 280];
   output.node.pos = [2140, 40]; output.node.size = [650, 420];
-  const save = graph._nodes.find(n => n.type === 'SaveVideo');
+  const save = graph._nodes.find(n => n.type === 'FixedSoundtrackSaveVideo');
   save.pos = [2140, 600]; save.size = [650, 470];
   for (let i = 1; i <= 3; i++) {
     const x = (i - 1) * 700;

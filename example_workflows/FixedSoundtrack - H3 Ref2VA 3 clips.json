@@ -1,5 +1,5 @@
 {
-  "id": "af30cda5-5a6c-44d5-97b9-0984887f4d23",
+  "id": "733c532d-fa2c-4112-bb85-0e3ef9ffb515",
   "revision": 0,
   "last_node_id": 77,
   "last_link_id": 417,
@@ -350,7 +350,7 @@
     },
     {
       "id": 69,
-      "type": "SaveVideo",
+      "type": "FixedSoundtrackSaveVideo",
       "pos": [
         2213,
         596
@@ -378,23 +378,29 @@
       ],
       "title": "Save / preview joined music video",
       "properties": {
-        "Node name for S&R": "SaveVideo",
-        "cnr_id": "comfy-core",
-        "ver": "0.38.0"
+        "Node name for S&R": "FixedSoundtrackSaveVideo",
+        "cnr_id": "comfyui-fixedsoundtrack",
+        "ver": "0.1.0"
       },
       "widgets_values": [
         "video/FixedSoundtrack/h3_three_clips",
         "mp4",
-        "h264",
+        "h265",
+        18,
+        0,
         "auto",
-        "auto"
+        "opus",
+        128
       ],
       "widgets_values_named": {
         "filename_prefix": "video/FixedSoundtrack/h3_three_clips",
-        "format": "mp4",
-        "format.codec": "h264",
-        "format.codec.encoding": "auto",
-        "codec": "auto"
+        "container": "mp4",
+        "video_codec": "h265",
+        "crf": 18,
+        "video_bitrate_kbps": 0,
+        "bit_depth": "auto",
+        "audio_codec": "opus",
+        "audio_bitrate_kbps": 128
       }
     },
     {
@@ -459,7 +465,7 @@
     },
     {
       "id": 72,
-      "type": "9c48c5ac-2c43-4a5f-b3c6-3b99eec5d125",
+      "type": "5db0a139-81fb-4490-b890-c918e86f354d",
       "pos": [
         2204,
         125
@@ -533,7 +539,7 @@
     },
     {
       "id": 73,
-      "type": "5efa092f-87b0-40c9-b870-aac4a7c9a54e",
+      "type": "78245333-cf53-4efc-8f0f-c84ee3c93ee3",
       "pos": [
         0,
         1570
@@ -679,7 +685,7 @@
     },
     {
       "id": 74,
-      "type": "f4f28160-cd46-492d-9792-11685c3aab17",
+      "type": "940b3a88-f96b-47dd-8891-007b494f508e",
       "pos": [
         700,
         1570
@@ -859,7 +865,7 @@
     },
     {
       "id": 75,
-      "type": "25cb2f10-f5af-4702-8de1-bbbec22d2ccc",
+      "type": "f82aaaa2-33ec-4b17-8a0a-dab604c6a7a8",
       "pos": [
         1400,
         1570
@@ -1031,7 +1037,7 @@
     },
     {
       "id": 76,
-      "type": "6c199d86-b5ea-41ba-9880-e5c3e8689aea",
+      "type": "2462b16c-97d0-447e-8362-855978b761ba",
       "pos": [
         1515,
         593
@@ -1096,7 +1102,7 @@
     },
     {
       "id": 77,
-      "type": "82cb0b48-548f-42e9-a5eb-30c8f3236b7c",
+      "type": "ed20990a-a8bc-46e3-8c09-7bd8f81506c2",
       "pos": [
         596,
         123
@@ -1798,7 +1804,7 @@
   "definitions": {
     "subgraphs": [
       {
-        "id": "9c48c5ac-2c43-4a5f-b3c6-3b99eec5d125",
+        "id": "5db0a139-81fb-4490-b890-c918e86f354d",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -1829,7 +1835,7 @@
         },
         "inputs": [
           {
-            "id": "3e97c52c-fdc2-4d9b-b4bc-1327a9f03f4d",
+            "id": "8b912bbb-7aec-4dc7-83a1-820d035bf9c4",
             "name": "av_latent",
             "type": "LATENT",
             "linkIds": [
@@ -1843,7 +1849,7 @@
             ]
           },
           {
-            "id": "4bad5bff-b47f-463e-8dda-41f8620a59d3",
+            "id": "eebdb3a5-dbe1-4151-98e0-42af271e0bc4",
             "name": "vae",
             "type": "VAE",
             "linkIds": [
@@ -1857,7 +1863,7 @@
             ]
           },
           {
-            "id": "c11f24f1-4550-4bf7-a73d-d69faaaa12be",
+            "id": "d8a5bdf4-d5b3-4d3f-85ba-8dfbbacce619",
             "name": "vae_1",
             "type": "VAE",
             "linkIds": [
@@ -1871,7 +1877,7 @@
             ]
           },
           {
-            "id": "eb014ef3-2f7f-4d2b-9155-6d35aff77b91",
+            "id": "919eb0ec-76af-438d-860b-7181949f2c2b",
             "name": "on_true",
             "type": "AUDIO",
             "linkIds": [
@@ -1886,7 +1892,7 @@
             ]
           },
           {
-            "id": "26c841d2-4bb3-4cf6-a8da-2ed81f54b7cf",
+            "id": "9a671f8d-214c-40f6-a10d-20e9876e5ada",
             "name": "vae_tile_size",
             "type": "INT",
             "linkIds": [
@@ -1898,7 +1904,7 @@
             ]
           },
           {
-            "id": "4f902c7a-e09c-4e33-97bd-f97a0690a9d9",
+            "id": "954ede4d-41df-42a6-911b-b98a96ec4aa7",
             "name": "vae_tile_overlap",
             "type": "INT",
             "linkIds": [
@@ -1910,7 +1916,7 @@
             ]
           },
           {
-            "id": "8c1a0b20-1f51-43f8-9367-36aee3f1584b",
+            "id": "b89fb38f-558e-4e82-8025-00b55fe2ef69",
             "name": "vae_temporal_size",
             "type": "INT",
             "linkIds": [
@@ -1922,7 +1928,7 @@
             ]
           },
           {
-            "id": "9986c9bc-7894-436d-a91d-8ab3479f79ce",
+            "id": "d8f9df45-19e8-4e4f-b111-0bb637cf494f",
             "name": "vae_temporal_overlap",
             "type": "INT",
             "linkIds": [
@@ -1934,7 +1940,7 @@
             ]
           },
           {
-            "id": "a514e7a5-2211-495a-8d6d-c3781f8c2e3a",
+            "id": "ee6ef7fa-78d5-40ed-b345-a15f804f8167",
             "name": "use_original_soundtrack",
             "type": "BOOLEAN",
             "linkIds": [
@@ -1946,7 +1952,7 @@
             ]
           },
           {
-            "id": "4820653a-7c16-4a0a-b59c-9dc65bc36377",
+            "id": "ff2f7658-60bd-4fd8-a37c-66eca0f090e7",
             "name": "video_bit_depth",
             "type": "COMBO",
             "linkIds": [
@@ -1958,7 +1964,7 @@
             ]
           },
           {
-            "id": "2a302c9c-4981-4e19-9b9a-f810e8c50cee",
+            "id": "75dcd99a-29b4-4946-95d8-f2ed443ec715",
             "name": "video_color_space",
             "type": "COMBO",
             "linkIds": [
@@ -1972,7 +1978,7 @@
         ],
         "outputs": [
           {
-            "id": "6fd1b819-2882-4952-a9c8-0d36123f288e",
+            "id": "8a2bb40e-c2fb-4195-a3ed-6c526ad69c31",
             "name": "VIDEO",
             "type": "VIDEO",
             "linkIds": [
@@ -2456,7 +2462,7 @@
         "extra": {}
       },
       {
-        "id": "5efa092f-87b0-40c9-b870-aac4a7c9a54e",
+        "id": "78245333-cf53-4efc-8f0f-c84ee3c93ee3",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -2487,7 +2493,7 @@
         },
         "inputs": [
           {
-            "id": "0443962e-f159-4d26-b73f-5a1a63ac9f58",
+            "id": "0beb4bae-5bce-4898-8728-4fcffaeb9980",
             "name": "clip",
             "type": "CLIP",
             "linkIds": [
@@ -2501,7 +2507,7 @@
             ]
           },
           {
-            "id": "3b093bee-03cd-4af8-a69c-6323f97ba6e2",
+            "id": "bb669ac4-782b-4446-a7e0-253db2216064",
             "name": "vae",
             "type": "VAE",
             "linkIds": [
@@ -2516,7 +2522,7 @@
             ]
           },
           {
-            "id": "d55c78e3-ad31-49ee-8e0e-ce843e082f43",
+            "id": "fcb7c044-9f8e-4a02-b4e5-e7e9e92d1fb2",
             "name": "audio_vae",
             "type": "VAE",
             "linkIds": [
@@ -2531,7 +2537,7 @@
             ]
           },
           {
-            "id": "e0abe5b4-565a-47d1-a210-052dd9f7106e",
+            "id": "c7fe6b44-5891-40ce-835e-85c880d9d246",
             "name": "ref_images.ref_image_0",
             "type": "IMAGE",
             "linkIds": [
@@ -2546,7 +2552,7 @@
             ]
           },
           {
-            "id": "529f7672-67ef-4525-afa5-2d643d623308",
+            "id": "39ca96b6-edb2-4308-8da0-335c1bc0b011",
             "name": "ref_images.ref_image_1",
             "type": "IMAGE",
             "linkIds": [
@@ -2561,7 +2567,7 @@
             ]
           },
           {
-            "id": "b04d569d-4695-45a0-b5d7-67209b62fd0c",
+            "id": "01e31f3d-b8f9-4e78-9b28-4473600034c1",
             "name": "width",
             "type": "INT",
             "linkIds": [
@@ -2574,7 +2580,7 @@
             ]
           },
           {
-            "id": "f9b27cdd-4815-4e7c-ba32-0c6a788d3254",
+            "id": "1a339a4a-ade1-479b-9f9d-f9e33747ef73",
             "name": "height",
             "type": "INT",
             "linkIds": [
@@ -2587,7 +2593,7 @@
             ]
           },
           {
-            "id": "fae840df-9b51-4b3c-9ba3-261e150214b0",
+            "id": "086844b8-dd6c-4fc4-9645-e59791040c11",
             "name": "length",
             "type": "INT",
             "linkIds": [
@@ -2600,7 +2606,7 @@
             ]
           },
           {
-            "id": "62234dfb-4cca-4533-8127-5547ead5dfee",
+            "id": "ec307711-d156-43bb-96a1-d37b9ce35ae7",
             "name": "master_audio_latent",
             "type": "LATENT",
             "linkIds": [
@@ -2614,7 +2620,7 @@
             ]
           },
           {
-            "id": "84254647-dc8c-4ca2-8dca-3eb12b6e06f8",
+            "id": "1e40067e-53f0-4c8b-851c-8d13e262c70e",
             "name": "mask",
             "type": "MASK",
             "linkIds": [
@@ -2628,7 +2634,7 @@
             ]
           },
           {
-            "id": "1236d9ce-ed6c-435f-967b-844a446f344d",
+            "id": "37b1a3a8-be51-4380-91c0-16d919dd92b5",
             "name": "model",
             "type": "MODEL",
             "linkIds": [
@@ -2642,7 +2648,7 @@
             ]
           },
           {
-            "id": "2d763157-378f-4ccd-aef2-41976d15d557",
+            "id": "fb9b158c-7a62-42aa-a18e-4edaa4296272",
             "name": "values.a",
             "type": "FLOAT,INT,BOOLEAN",
             "linkIds": [
@@ -2656,7 +2662,7 @@
             ]
           },
           {
-            "id": "833db9a6-ff76-4c11-9ce3-8ab2e1c71fc3",
+            "id": "5b5d6434-2d7e-40f3-afe3-eac74f28a391",
             "name": "sampler",
             "type": "SAMPLER",
             "linkIds": [
@@ -2670,7 +2676,7 @@
             ]
           },
           {
-            "id": "e363c1c7-b774-4ca2-8f49-17dcbd4aa925",
+            "id": "66fdb84a-8383-4d4e-9721-119346295a44",
             "name": "sigmas",
             "type": "SIGMAS",
             "linkIds": [
@@ -2684,7 +2690,7 @@
             ]
           },
           {
-            "id": "2f56396e-7a7c-4e46-a507-74c61188dfd9",
+            "id": "d04c0030-b9fe-4acb-835f-7ca0725188ab",
             "name": "prompt",
             "type": "STRING",
             "linkIds": [
@@ -2696,7 +2702,7 @@
             ]
           },
           {
-            "id": "4c575b05-b877-4e4d-a347-384343700050",
+            "id": "41a6184f-f550-4576-b429-cd30aa01a2b7",
             "name": "reference_image_size",
             "type": "COMBO",
             "linkIds": [
@@ -2708,7 +2714,7 @@
             ]
           },
           {
-            "id": "df7e2b1a-c01b-4948-b56b-de519ed38660",
+            "id": "4d4b9b99-b37c-41ee-bafa-52624805e85b",
             "name": "optional_reference_3",
             "type": "IMAGE",
             "linkIds": [
@@ -2723,7 +2729,7 @@
         ],
         "outputs": [
           {
-            "id": "1a79eef1-b67f-4293-9e70-bd3596d391a0",
+            "id": "24505280-8caf-4049-bdfc-fcdb0c33d0ef",
             "name": "output",
             "type": "LATENT",
             "linkIds": [
@@ -3567,7 +3573,7 @@
         "extra": {}
       },
       {
-        "id": "f4f28160-cd46-492d-9792-11685c3aab17",
+        "id": "940b3a88-f96b-47dd-8891-007b494f508e",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -3598,7 +3604,7 @@
         },
         "inputs": [
           {
-            "id": "a3c20266-a679-4d65-b228-bca8bd43b808",
+            "id": "a6b873c6-2435-4c14-92c4-4c5ae7740119",
             "name": "clip",
             "type": "CLIP",
             "linkIds": [
@@ -3612,7 +3618,7 @@
             ]
           },
           {
-            "id": "6e952b0c-5a31-4106-8825-607a90e6d7f3",
+            "id": "53c83fef-785d-4e73-b7a9-f775c4d3f24e",
             "name": "vae",
             "type": "VAE",
             "linkIds": [
@@ -3627,7 +3633,7 @@
             ]
           },
           {
-            "id": "a1033616-591c-4c43-8b4a-622bb6a44670",
+            "id": "9f205c35-fe2e-404b-9c7f-c215bd20acbc",
             "name": "audio_vae",
             "type": "VAE",
             "linkIds": [
@@ -3642,7 +3648,7 @@
             ]
           },
           {
-            "id": "8dce0275-0797-45ea-a002-a9b2dacb72d4",
+            "id": "829a6bb5-213f-4d5e-9d9c-5f31b3e04293",
             "name": "ref_images.ref_image_0",
             "type": "IMAGE",
             "linkIds": [
@@ -3657,7 +3663,7 @@
             ]
           },
           {
-            "id": "e918754c-0978-480d-adb1-388aa5cf732e",
+            "id": "11e52ad6-cc66-4943-b672-8cd83285b4fb",
             "name": "ref_images.ref_image_1",
             "type": "IMAGE",
             "linkIds": [
@@ -3672,7 +3678,7 @@
             ]
           },
           {
-            "id": "4295faf6-460e-4a64-9e03-ef5c4567227a",
+            "id": "3a9b4698-1d5b-454f-b704-8ea119d388c7",
             "name": "width",
             "type": "INT",
             "linkIds": [
@@ -3685,7 +3691,7 @@
             ]
           },
           {
-            "id": "6425e8d0-6c75-4e10-8137-6c48ffc1d7c2",
+            "id": "3fbccb12-baaa-4d6f-a017-ff6c6ab78e86",
             "name": "height",
             "type": "INT",
             "linkIds": [
@@ -3698,7 +3704,7 @@
             ]
           },
           {
-            "id": "84776293-6126-456d-8db3-4b98a13f3faa",
+            "id": "dd7e0662-5088-49d9-9c08-75a936a13451",
             "name": "previous_av_latent",
             "type": "LATENT",
             "linkIds": [
@@ -3715,7 +3721,7 @@
             ]
           },
           {
-            "id": "2ef1af4e-b0f0-447d-adf7-f9ccb2430ed7",
+            "id": "9ad473a3-1bf7-4ff9-b29a-abb7d59e1fed",
             "name": "overlap_frames",
             "type": "INT",
             "linkIds": [
@@ -3728,7 +3734,7 @@
             ]
           },
           {
-            "id": "eb721547-1dc8-4995-9870-9e7d38be6653",
+            "id": "ae1ea078-1cbc-4846-a590-885c407cc70c",
             "name": "extension_frames",
             "type": "INT",
             "linkIds": [
@@ -3741,7 +3747,7 @@
             ]
           },
           {
-            "id": "9580aa4c-ced6-48f9-9f3b-4d9b444b2451",
+            "id": "d3bc78ce-e72e-4692-8122-fc4387a0e801",
             "name": "master_audio_latent",
             "type": "LATENT",
             "linkIds": [
@@ -3755,7 +3761,7 @@
             ]
           },
           {
-            "id": "cd774657-41df-4ebb-8d9d-a94b7288a750",
+            "id": "1a0c5c1d-79f4-4cd9-9f59-a01145ffd6d2",
             "name": "start_frame",
             "type": "INT",
             "linkIds": [
@@ -3768,7 +3774,7 @@
             ]
           },
           {
-            "id": "4ddcc913-0e88-47c8-9aa6-5ee9c4c7416f",
+            "id": "5a97d1db-1988-437f-bc47-a52c4aa1fa72",
             "name": "mask",
             "type": "MASK",
             "linkIds": [
@@ -3782,7 +3788,7 @@
             ]
           },
           {
-            "id": "4784ac99-456a-45a7-b832-bef33c071af3",
+            "id": "eac38818-680a-414d-a48a-a6c42e24776f",
             "name": "model",
             "type": "MODEL",
             "linkIds": [
@@ -3796,7 +3802,7 @@
             ]
           },
           {
-            "id": "277e57ef-6c81-49f7-8c96-14913282a9a9",
+            "id": "46e42468-fbac-4b5c-a46a-608ba06de1da",
             "name": "values.a",
             "type": "FLOAT,INT,BOOLEAN",
             "linkIds": [
@@ -3810,7 +3816,7 @@
             ]
           },
           {
-            "id": "8e9bbe87-ff6c-4b92-8fdd-fc7b1579118f",
+            "id": "a5586efd-4459-44fc-ad8d-ea21a8e57181",
             "name": "sampler",
             "type": "SAMPLER",
             "linkIds": [
@@ -3824,7 +3830,7 @@
             ]
           },
           {
-            "id": "e429a448-9fcf-4747-806b-be78a1455a4f",
+            "id": "2d60818f-5f63-428a-ba8f-aca0626570ed",
             "name": "sigmas",
             "type": "SIGMAS",
             "linkIds": [
@@ -3838,7 +3844,7 @@
             ]
           },
           {
-            "id": "e7f55011-caf7-4c67-abc4-9f200da8e227",
+            "id": "37c6df3c-910c-49ee-ba21-db22a691ea0a",
             "name": "prompt",
             "type": "STRING",
             "linkIds": [
@@ -3850,7 +3856,7 @@
             ]
           },
           {
-            "id": "c5d39f67-87ca-4f5f-aaf6-f5897f49eb99",
+            "id": "34bc2bdd-0cd2-4f4f-beb7-b7d8365a13cb",
             "name": "reference_image_size",
             "type": "COMBO",
             "linkIds": [
@@ -3862,7 +3868,7 @@
             ]
           },
           {
-            "id": "ffac5400-675c-4ca0-b290-e76893811583",
+            "id": "1b7968e5-51b7-45dc-b11c-b11f67619679",
             "name": "optional_reference_3",
             "type": "IMAGE",
             "linkIds": [
@@ -3877,7 +3883,7 @@
         ],
         "outputs": [
           {
-            "id": "35228adc-b557-4fde-9333-a31a6bcc774d",
+            "id": "2304b6cb-60ab-44ae-a1cf-7841a3a441b3",
             "name": "latent",
             "type": "LATENT",
             "linkIds": [
@@ -3891,7 +3897,7 @@
             ]
           },
           {
-            "id": "17bb44b0-db48-4ad1-9034-4dbf3650eac6",
+            "id": "6c9d6944-f073-4278-a597-de06fa7d89bc",
             "name": "total_length",
             "type": "INT",
             "linkIds": [
@@ -5144,7 +5150,7 @@
         "extra": {}
       },
       {
-        "id": "25cb2f10-f5af-4702-8de1-bbbec22d2ccc",
+        "id": "f82aaaa2-33ec-4b17-8a0a-dab604c6a7a8",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -5175,7 +5181,7 @@
         },
         "inputs": [
           {
-            "id": "5925d71b-f2e4-4be8-bd56-a5dd44abdd6e",
+            "id": "45b00ad2-a01b-4655-acfe-3a30d9071240",
             "name": "clip",
             "type": "CLIP",
             "linkIds": [
@@ -5189,7 +5195,7 @@
             ]
           },
           {
-            "id": "112f1bd3-ec40-4eb5-b184-3a1bfc100aa5",
+            "id": "7b03681c-7c3c-4416-bbd1-fb071997a254",
             "name": "vae",
             "type": "VAE",
             "linkIds": [
@@ -5204,7 +5210,7 @@
             ]
           },
           {
-            "id": "8e2a4391-a1d4-4aac-9c57-6ecc89014163",
+            "id": "cde27956-f9b7-4a44-8858-e5c1520c9f95",
             "name": "audio_vae",
             "type": "VAE",
             "linkIds": [
@@ -5219,7 +5225,7 @@
             ]
           },
           {
-            "id": "f96ed15c-9ee4-4d09-8555-83dfb6b117ad",
+            "id": "ffb6be18-b8ef-40e7-90c6-a23f2f9b4a68",
             "name": "ref_images.ref_image_0",
             "type": "IMAGE",
             "linkIds": [
@@ -5234,7 +5240,7 @@
             ]
           },
           {
-            "id": "38a9109d-64e3-47eb-8ae7-eedc3b6d4421",
+            "id": "61251513-c29a-4fc3-9d54-0a34ae58b56c",
             "name": "ref_images.ref_image_1",
             "type": "IMAGE",
             "linkIds": [
@@ -5249,7 +5255,7 @@
             ]
           },
           {
-            "id": "287f1844-d8ec-45ac-88fc-38ee98b32425",
+            "id": "37d798ea-dc09-4e88-8abd-11f296b4c71d",
             "name": "width",
             "type": "INT",
             "linkIds": [
@@ -5262,7 +5268,7 @@
             ]
           },
           {
-            "id": "cd451f26-e451-4008-a580-2c83b115b431",
+            "id": "e9595736-70b5-4dc6-8c06-9781d95b54ae",
             "name": "height",
             "type": "INT",
             "linkIds": [
@@ -5275,7 +5281,7 @@
             ]
           },
           {
-            "id": "41eee430-21bb-4ed1-b4a3-a9397c625253",
+            "id": "93b2df5d-b862-4539-bc95-9d2316c2b572",
             "name": "previous_av_latent",
             "type": "LATENT",
             "linkIds": [
@@ -5292,7 +5298,7 @@
             ]
           },
           {
-            "id": "eb13958a-8feb-4d40-b899-84a02c7144cd",
+            "id": "cdadfd23-6c88-4f05-817f-05c9218c8c11",
             "name": "overlap_frames",
             "type": "INT",
             "linkIds": [
@@ -5305,7 +5311,7 @@
             ]
           },
           {
-            "id": "707a6417-f337-4756-a564-77ea31c53d5d",
+            "id": "5366d4ae-1f66-47a7-a9c9-785788312a20",
             "name": "extension_frames",
             "type": "INT",
             "linkIds": [
@@ -5318,7 +5324,7 @@
             ]
           },
           {
-            "id": "c6828103-bafb-4c43-86ec-5d24c9ce5856",
+            "id": "d1f2ccda-81b0-48f6-9ff5-9ec053407e11",
             "name": "master_audio_latent",
             "type": "LATENT",
             "linkIds": [
@@ -5332,7 +5338,7 @@
             ]
           },
           {
-            "id": "e9f9f168-b7a2-46ac-b1c6-c8af2fc22c81",
+            "id": "ccb22d58-0437-4f5f-950e-c5128de8c063",
             "name": "start_frame",
             "type": "INT",
             "linkIds": [
@@ -5345,7 +5351,7 @@
             ]
           },
           {
-            "id": "b1e8cb77-2bc1-481e-83f2-6f60991e62d6",
+            "id": "c78faed1-f160-46c1-b28b-e67a63b49005",
             "name": "mask",
             "type": "MASK",
             "linkIds": [
@@ -5359,7 +5365,7 @@
             ]
           },
           {
-            "id": "3f67c1bb-f269-4922-8b2a-a68a4096afb3",
+            "id": "8962796c-88c6-4612-8819-2457c4eacd26",
             "name": "model",
             "type": "MODEL",
             "linkIds": [
@@ -5373,7 +5379,7 @@
             ]
           },
           {
-            "id": "1681a1fb-8445-4521-8fa0-6e97ab39b6f9",
+            "id": "b4984eb8-9d2d-4380-82ec-477f26ae6e5b",
             "name": "values.a",
             "type": "FLOAT,INT,BOOLEAN",
             "linkIds": [
@@ -5387,7 +5393,7 @@
             ]
           },
           {
-            "id": "8f56a2f0-c89f-4563-bab0-0ca4307809d8",
+            "id": "354f941e-178a-4bee-aa49-a71c9398124e",
             "name": "sampler",
             "type": "SAMPLER",
             "linkIds": [
@@ -5401,7 +5407,7 @@
             ]
           },
           {
-            "id": "c267a82d-c52d-4b24-a6a2-bebf945ca45d",
+            "id": "2160ead9-4a54-4fda-beb8-42213083e2dc",
             "name": "sigmas",
             "type": "SIGMAS",
             "linkIds": [
@@ -5415,7 +5421,7 @@
             ]
           },
           {
-            "id": "c9254148-7250-4227-a2fc-b7a69173cd0b",
+            "id": "01891435-d114-4c4d-b9d6-cee135eaf3c7",
             "name": "prompt",
             "type": "STRING",
             "linkIds": [
@@ -5427,7 +5433,7 @@
             ]
           },
           {
-            "id": "bd2441a4-6db5-400b-8e82-d07e34612fb6",
+            "id": "cc796a56-4186-4c3b-b110-ca013750db2f",
             "name": "reference_image_size",
             "type": "COMBO",
             "linkIds": [
@@ -5439,7 +5445,7 @@
             ]
           },
           {
-            "id": "eb155552-fcc1-4042-b4d6-a18414e0291b",
+            "id": "402a705c-3f8c-4f75-b62c-74d22030b25a",
             "name": "optional_reference_3",
             "type": "IMAGE",
             "linkIds": [
@@ -5454,7 +5460,7 @@
         ],
         "outputs": [
           {
-            "id": "f3de616c-8182-4962-914b-33b24ffe3bab",
+            "id": "7cdabc61-2f0e-4e8d-8857-d424564d7856",
             "name": "latent",
             "type": "LATENT",
             "linkIds": [
@@ -6697,7 +6703,7 @@
         "extra": {}
       },
       {
-        "id": "6c199d86-b5ea-41ba-9880-e5c3e8689aea",
+        "id": "2462b16c-97d0-447e-8362-855978b761ba",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -6728,7 +6734,7 @@
         },
         "inputs": [
           {
-            "id": "924addde-46bc-4629-a007-c0a6567c85a1",
+            "id": "e38bb03e-d700-467a-80a2-b79a1b466440",
             "name": "clip_1_frames_5_plus_17n",
             "type": "INT",
             "linkIds": [
@@ -6740,7 +6746,7 @@
             ]
           },
           {
-            "id": "f664a059-f518-4f9e-a1b6-0851f12a1d0d",
+            "id": "5a9dc203-64f2-4e31-b47e-64a64b5616f6",
             "name": "clip_2_new_frames_multiple_of_17",
             "type": "INT",
             "linkIds": [
@@ -6752,7 +6758,7 @@
             ]
           },
           {
-            "id": "1f39d729-5d58-441d-8e48-4dde5963ddb8",
+            "id": "8cc8f306-ca84-4ebd-903e-f008478d4ba5",
             "name": "clip_3_new_frames_multiple_of_17",
             "type": "INT",
             "linkIds": [
@@ -6766,7 +6772,7 @@
         ],
         "outputs": [
           {
-            "id": "4eea7869-f605-476a-8597-ea1274301f42",
+            "id": "3a027f2a-066b-40fb-a5ce-856c4166222e",
             "name": "INT",
             "type": "INT",
             "linkIds": [
@@ -6780,7 +6786,7 @@
             ]
           },
           {
-            "id": "1bd3b119-9dc8-40d4-b96a-58afe33fa228",
+            "id": "b887bbbe-e783-4664-ae66-dc2ba5b563f6",
             "name": "INT_1",
             "type": "INT",
             "linkIds": [
@@ -6794,7 +6800,7 @@
             ]
           },
           {
-            "id": "cd6b1dc9-1896-43df-aa99-7f968181b148",
+            "id": "1fe12bb1-25bf-430a-9718-20c87e8e7733",
             "name": "INT_2",
             "type": "INT",
             "linkIds": [
@@ -6808,7 +6814,7 @@
             ]
           },
           {
-            "id": "d2ef5c2f-60f7-4927-8104-5fb32727d544",
+            "id": "d57f0ec1-ecf6-41df-b253-8201ef4d641d",
             "name": "FLOAT",
             "type": "FLOAT",
             "linkIds": [
@@ -7142,7 +7148,7 @@
         "extra": {}
       },
       {
-        "id": "82cb0b48-548f-42e9-a5eb-30c8f3236b7c",
+        "id": "ed20990a-a8bc-46e3-8c09-7bd8f81506c2",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -7173,7 +7179,7 @@
         },
         "inputs": [
           {
-            "id": "fdff0aab-071a-42b9-bfea-3a683d02b9a4",
+            "id": "4c349127-b792-44c8-9e66-738a527fe526",
             "name": "audio",
             "type": "AUDIO",
             "linkIds": [
@@ -7187,7 +7193,7 @@
             ]
           },
           {
-            "id": "bbace9d2-f670-49fc-967c-ef2461a5a6c0",
+            "id": "0ad9f141-cf26-4ee3-abb8-461e0e33a60a",
             "name": "duration",
             "type": "FLOAT",
             "linkIds": [
@@ -7200,7 +7206,7 @@
             ]
           },
           {
-            "id": "7deab679-e406-4cc7-a7bd-17ab88d887ba",
+            "id": "be140df7-129b-4a8d-af90-35b2ab9fe42f",
             "name": "diffusion_model",
             "type": "COMBO",
             "linkIds": [
@@ -7212,7 +7218,7 @@
             ]
           },
           {
-            "id": "dc1aa8bf-69e4-4b36-a808-f65b6e73f8a8",
+            "id": "ebdf565f-594f-48ca-94cb-02f39f6ce009",
             "name": "weight_dtype",
             "type": "COMBO",
             "linkIds": [
@@ -7224,7 +7230,7 @@
             ]
           },
           {
-            "id": "739d118c-5158-48c2-a8f9-48bd2d489f06",
+            "id": "d592f4f7-dcfc-41bf-9148-f89ed48c9642",
             "name": "text_vision_encoder",
             "type": "COMBO",
             "linkIds": [
@@ -7236,7 +7242,7 @@
             ]
           },
           {
-            "id": "42dddca0-a38d-438a-88c3-976c320ecbab",
+            "id": "9e4d3a8d-f9ae-42f4-ab85-b17bea9e057f",
             "name": "text_encoder_device",
             "type": "COMBO",
             "linkIds": [
@@ -7248,7 +7254,7 @@
             ]
           },
           {
-            "id": "18c55a7b-3557-482d-ac0c-6fdb71c1714d",
+            "id": "b61afd06-b360-4963-ad4a-38b97a8e594c",
             "name": "video_vae",
             "type": "COMBO",
             "linkIds": [
@@ -7260,7 +7266,7 @@
             ]
           },
           {
-            "id": "1e70553e-0dd0-4aa0-a716-4fd7dc5f36df",
+            "id": "bb7eb7e6-6eef-4d2d-ade4-fe70dbc32b55",
             "name": "audio_vae",
             "type": "COMBO",
             "linkIds": [
@@ -7272,7 +7278,7 @@
             ]
           },
           {
-            "id": "e75dc5f7-4710-431b-969c-649cd831d5a9",
+            "id": "62f74540-1507-4676-8d16-fe93cb9c6576",
             "name": "attention_backend",
             "type": "COMBO",
             "linkIds": [
@@ -7284,7 +7290,7 @@
             ]
           },
           {
-            "id": "d288edd0-8495-4685-809e-9498373ca94d",
+            "id": "a2d2f8c9-739f-43a0-99c7-bbfd0130b654",
             "name": "video_shift",
             "type": "FLOAT",
             "linkIds": [
@@ -7296,7 +7302,7 @@
             ]
           },
           {
-            "id": "462d0351-c6dc-4d59-ac88-e87e87cb0ba7",
+            "id": "4e86f4ce-7c5a-41fe-bee5-29f1daabcb50",
             "name": "audio_shift",
             "type": "FLOAT",
             "linkIds": [
@@ -7308,7 +7314,7 @@
             ]
           },
           {
-            "id": "f0cd2f76-ebec-44b3-a444-2c64c20d9fed",
+            "id": "b7d41262-5f21-45aa-92ab-a7351c2dd2f3",
             "name": "width_multiple_of_32",
             "type": "INT",
             "linkIds": [
@@ -7320,7 +7326,7 @@
             ]
           },
           {
-            "id": "9fc3d104-7b81-40c3-8a15-ddcb0aff37f5",
+            "id": "2bd58ff9-09df-4455-8c32-20f561e966aa",
             "name": "height_multiple_of_32",
             "type": "INT",
             "linkIds": [
@@ -7332,7 +7338,7 @@
             ]
           },
           {
-            "id": "0f1e9901-9f96-40d0-963c-cad04d8e7ced",
+            "id": "6fa9add5-8da8-4d98-9936-bb1b2b42a421",
             "name": "hidden_overlap_5_plus_17n",
             "type": "INT",
             "linkIds": [
@@ -7344,7 +7350,7 @@
             ]
           },
           {
-            "id": "8f016d77-37de-4ed1-96da-9a0321e6640c",
+            "id": "af258739-642d-4dce-b4b2-2f2d79ab3260",
             "name": "song_offset_seconds",
             "type": "FLOAT",
             "linkIds": [
@@ -7356,7 +7362,7 @@
             ]
           },
           {
-            "id": "53696aec-4fcb-4cba-9054-8a610c2942d1",
+            "id": "bdb55d57-e18d-4413-8e5b-ee46d44293da",
             "name": "sampler",
             "type": "COMBO",
             "linkIds": [
@@ -7368,7 +7374,7 @@
             ]
           },
           {
-            "id": "2927e236-9b69-4289-aba6-e6fa3577c927",
+            "id": "763b58b6-8f4e-474b-ba94-3adf083cd71a",
             "name": "scheduler",
             "type": "COMBO",
             "linkIds": [
@@ -7380,7 +7386,7 @@
             ]
           },
           {
-            "id": "b747f025-cd52-4334-8b41-982636271ce7",
+            "id": "8182d820-6411-4e50-8a08-078fe1ab1a8a",
             "name": "steps",
             "type": "INT",
             "linkIds": [
@@ -7392,7 +7398,7 @@
             ]
           },
           {
-            "id": "76c02543-84dc-46f6-8c00-36c2d945ba48",
+            "id": "37440e7f-41bf-4ea7-b68c-97faca8226cb",
             "name": "denoise",
             "type": "FLOAT",
             "linkIds": [
@@ -7406,7 +7412,7 @@
         ],
         "outputs": [
           {
-            "id": "30ae047c-bdd7-4615-a6ef-db501e1eb8ea",
+            "id": "1f894130-9b58-4069-aac3-aa9f9b660d5d",
             "name": "MODEL",
             "type": "MODEL",
             "linkIds": [
@@ -7420,7 +7426,7 @@
             ]
           },
           {
-            "id": "fda7f6b6-eda5-4356-a36b-7c487cf21915",
+            "id": "1d38edf2-543b-46ce-9559-1a592ceca6b6",
             "name": "CLIP",
             "type": "CLIP",
             "linkIds": [
@@ -7434,7 +7440,7 @@
             ]
           },
           {
-            "id": "581ed633-c920-4cf4-96c5-f0efe2933268",
+            "id": "f752bf3f-caf8-4302-acd1-582ae04db4d9",
             "name": "VAE",
             "type": "VAE",
             "linkIds": [
@@ -7448,7 +7454,7 @@
             ]
           },
           {
-            "id": "f2549bdd-d013-408b-9aca-6069b2fdad20",
+            "id": "af4beba3-a9e9-44ce-96d8-e80b8ddfdc20",
             "name": "VAE_1",
             "type": "VAE",
             "linkIds": [
@@ -7462,7 +7468,7 @@
             ]
           },
           {
-            "id": "7d0b02fd-aa4a-4a1b-8997-8df0526ccb88",
+            "id": "b9c4eb22-740c-4a4f-940f-60e51996b411",
             "name": "INT",
             "type": "INT",
             "linkIds": [
@@ -7476,7 +7482,7 @@
             ]
           },
           {
-            "id": "c64cdc62-245d-4316-abcd-eda3306f6692",
+            "id": "d080e7af-d25f-4acd-8bcb-67619ea6f59d",
             "name": "INT_1",
             "type": "INT",
             "linkIds": [
@@ -7490,7 +7496,7 @@
             ]
           },
           {
-            "id": "6b894781-ae5b-4841-9fc9-bb6735634ae8",
+            "id": "578abdf4-6819-4dac-a389-60ea71086028",
             "name": "INT_2",
             "type": "INT",
             "linkIds": [
@@ -7504,7 +7510,7 @@
             ]
           },
           {
-            "id": "a3109813-40c8-489d-8791-4051d4c1145d",
+            "id": "372fe8db-c06e-4251-8d40-b6beff8f19c7",
             "name": "SAMPLER",
             "type": "SAMPLER",
             "linkIds": [
@@ -7518,7 +7524,7 @@
             ]
           },
           {
-            "id": "96b70e07-301d-4921-8b97-62ff7d366989",
+            "id": "0947c163-1f12-4eae-b0b4-ffd0893fd924",
             "name": "SIGMAS",
             "type": "SIGMAS",
             "linkIds": [
@@ -7532,7 +7538,7 @@
             ]
           },
           {
-            "id": "06428596-a6c7-438e-91d6-6cb779e8c19b",
+            "id": "1c4a3216-c126-40ac-8bbc-9717bdfa0856",
             "name": "MASK",
             "type": "MASK",
             "linkIds": [
@@ -7546,7 +7552,7 @@
             ]
           },
           {
-            "id": "35957609-e0af-4535-8be2-2128be549a3b",
+            "id": "29be261b-3031-44df-8177-60c1d4d45550",
             "name": "LATENT",
             "type": "LATENT",
             "linkIds": [
@@ -7560,7 +7566,7 @@
             ]
           },
           {
-            "id": "70f4f1c9-d129-4733-9f44-fe9f72ab4883",
+            "id": "b080b35b-8be4-459c-a19e-85c5cc5ea066",
             "name": "AUDIO",
             "type": "AUDIO",
             "linkIds": [

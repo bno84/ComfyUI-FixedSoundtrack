@@ -74,16 +74,19 @@
   "69": {
     "inputs": {
       "filename_prefix": "video/FixedSoundtrack/h3_three_clips",
-      "format": "mp4",
-      "format.codec": "h264",
-      "format.codec.encoding": "auto",
-      "codec": "auto",
+      "container": "mp4",
+      "video_codec": "h265",
+      "crf": 18,
+      "video_bitrate_kbps": 0,
+      "bit_depth": "auto",
+      "audio_codec": "opus",
+      "audio_bitrate_kbps": 128,
       "video": [
         "72:68",
         0
       ]
     },
-    "class_type": "SaveVideo",
+    "class_type": "FixedSoundtrackSaveVideo",
     "_meta": {
       "title": "Save / preview joined music video"
     }
