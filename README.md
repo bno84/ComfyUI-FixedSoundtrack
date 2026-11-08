@@ -137,7 +137,9 @@ Tests need ComfyUI on `PYTHONPATH` and the continuation pack beside this one in
 PYTHONPATH=/path/to/ComfyUI python -m unittest discover -s tests -v
 ```
 
-The template is generated; see [`tools/template/`](tools/template/README.md).
+The workflow JSON in `example_workflows/` is the source of truth. Edit it in
+ComfyUI and commit the exported editor workflow, preserving its subgraphs,
+layout, and backend node pack entries (`cnr_id`).
 
 ## License
 

@@ -8,7 +8,7 @@ pass.
 ## Before the first release
 
 - Replace the stand-ins in `example_inputs/` with redistributable demo media,
-  regenerate the template (`tools/template/`) and its thumbnail.
+  update the workflow in `example_workflows/` and its thumbnail.
 - Add a template screenshot to `docs/` and the README.
 
 ## One-time setup
