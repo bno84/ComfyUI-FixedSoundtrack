@@ -10,7 +10,7 @@
   },
   "15": {
     "inputs": {
-      "audio": "fixedsoundtrack-song.flac"
+      "audio": "fixedsoundtrack-song.webm"
     },
     "class_type": "LoadAudio",
     "_meta": {

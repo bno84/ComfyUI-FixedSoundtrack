@@ -41,7 +41,7 @@ DOWNLOADS = {
     VIDEO_VAE: ("vae", "minimax_h3_video_vae_fp16.safetensors"),
     AUDIO_VAE: ("vae", "minimax_h3_audio_vae_fp32.safetensors"),
 }
-INPUTS = ["fixedsoundtrack-subject.png", "fixedsoundtrack-setting.png", "fixedsoundtrack-song.flac"]
+INPUTS = ["fixedsoundtrack-subject.png", "fixedsoundtrack-setting.png", "fixedsoundtrack-song.webm"]
 nodes, links, groups = [], [], []
 
 
@@ -87,7 +87,7 @@ node("sampler", "KSamplerSelect", "Shared sampler", 2310, 60, {"sampler_name": "
 node("schedule", "BasicScheduler", "Shared schedule · full denoise", 2310, 230, {"scheduler": "sgm_uniform", "steps": 4, "denoise": 1.0}, [330, 150])
 link("shift", 0, "schedule", "model")
 node("zero_mask", "SolidMask", "Preserve audio · zero denoise", 2310, 470, {"value": 0.0, "width": 1, "height": 1}, [330, 130])
-node("audio", "LoadAudio", "Your song", 2750, 60, {"audio": "fixedsoundtrack-song.flac"}, [470, 160])
+node("audio", "LoadAudio", "Your song", 2750, 60, {"audio": "fixedsoundtrack-song.webm"}, [470, 160])
 node("encode_audio", "VAEEncodeAudio", "Encode selected song range ONCE", 2750, 310, {}, [470, 100])
 node("audio_trim", "TrimAudioDuration", "Trim song BEFORE GPU encoding", 2750, 750, {}, [470, 150])
 node("audio_duration", "ComfyMathExpression", "Planned song duration · H3 40 Hz", 2750, 1000,
