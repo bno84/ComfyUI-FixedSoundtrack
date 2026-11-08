@@ -54,18 +54,21 @@ then write each clip's prompt.
 
 ### Models
 
+The template uses the maintainer's file names and subfolders:
+
 | Model | Folder | Source |
 | --- | --- | --- |
-| `dasiwa_minimax_h3_ref2va_v4_pruned_turbo_int8.safetensors` | `diffusion_models` | [DaSiWa MiniMax H3 · Hybrid v4 Turbo](https://civitai.com/models/2877206?modelVersionId=3392061) |
-| `qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors` | `text_encoders` | [Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3) |
-| `minimax_h3_video_vae_fp16.safetensors` | `vae` | [Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3) |
-| `minimax_h3_audio_vae_fp32.safetensors` | `vae` | [Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3) |
+| `minimax-h3/DasiwaMinimaxH3_dasiwaHybridV4Turbo_int8.safetensors` | `diffusion_models` | [DaSiWa MiniMax H3 · Hybrid v4 Turbo](https://civitai.com/models/2877206?modelVersionId=3392061) (INT8) |
+| `minimax-h3/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors` | `text_encoders` | [Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3) |
+| `MiniMax-H3-video_vae_fp16.safetensors` | `vae` | [Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3) `minimax_h3_video_vae_fp16` |
+| `minimax-h3/minimax_h3_audio_vae_fp32.safetensors` | `vae` | [Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3) |
 
+If yours are stored elsewhere, pick them in the shared settings subgraph.
 The template offers downloads for the Comfy-Org files. Defaults suit the
 turbo checkpoint: 832×480, res_multistep / sgm_uniform, 4 steps, video/audio
-shifts 7 / 4, CFG-free guidance. Adjust steps, sampler and shifts for other H3
-checkpoints. Comfy Kitchen attention (INT8; Nvidia and AMD only) can be
-faster than the default PyTorch attention.
+shifts 7 / 4, CFG-free guidance, Comfy Kitchen attention. Adjust steps, sampler and shifts
+for other H3 checkpoints. Kitchen attention is INT8 and runs only on Nvidia and
+AMD GPUs; choose PyTorch attention elsewhere.
 
 ### Durations
 

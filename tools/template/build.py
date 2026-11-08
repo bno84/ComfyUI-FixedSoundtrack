@@ -31,11 +31,15 @@ CONTINUATION_ID = "comfyui-minimax-h3-continuation"
 CONTINUATION_VERSION = "e1768d5fdfc6f9519d2090dcf78458c2d9625f80"
 HF = "https://huggingface.co/Comfy-Org/MiniMax-H3/resolve/main"
 DASIWA = "https://civitai.com/models/2877206?modelVersionId=3392061"
-MODEL = "dasiwa_minimax_h3_ref2va_v4_pruned_turbo_int8.safetensors"
+# The maintainer's model paths. Download links name the Comfy-Org source file.
+MODEL = "minimax-h3/DasiwaMinimaxH3_dasiwaHybridV4Turbo_int8.safetensors"
+TEXT_ENCODER = "minimax-h3/qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors"
+VIDEO_VAE = "MiniMax-H3-video_vae_fp16.safetensors"
+AUDIO_VAE = "minimax-h3/minimax_h3_audio_vae_fp32.safetensors"
 DOWNLOADS = {
-    "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors": "text_encoders",
-    "minimax_h3_video_vae_fp16.safetensors": "vae",
-    "minimax_h3_audio_vae_fp32.safetensors": "vae",
+    TEXT_ENCODER: ("text_encoders", "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors"),
+    VIDEO_VAE: ("vae", "minimax_h3_video_vae_fp16.safetensors"),
+    AUDIO_VAE: ("vae", "minimax_h3_audio_vae_fp32.safetensors"),
 }
 INPUTS = ["fixedsoundtrack-subject.png", "fixedsoundtrack-setting.png", "fixedsoundtrack-song.flac"]
 nodes, links, groups = [], [], []
@@ -63,18 +67,18 @@ node("guide", "Note", "START HERE", 20, 55, {"text":
      "One shared seed: clip N samples with seed + N − 1.\n\n"
      f"Models: [DaSiWa MiniMax H3 Hybrid v4 Turbo]({DASIWA}) (INT8, 4 steps, res_multistep/sgm_uniform, shifts 7/4, CFG-free BasicGuider) in diffusion_models. "
      f"Text encoder and VAEs: [Comfy-Org/MiniMax-H3](https://huggingface.co/Comfy-Org/MiniMax-H3). For other H3 checkpoints, adjust steps, sampler and shifts.\n\n"
-     "Comfy Kitchen attention (INT8, Nvidia and AMD only) can be faster than the default PyTorch attention.\n\n"
+     "Attention defaults to Comfy Kitchen (INT8, Nvidia and AMD only); choose PyTorch attention elsewhere.\n\n"
      "Requires ComfyUI-Minimax-H3-Continuation 0.6.3 or newer, installed from Git."}, [620, 650])
 node("model", "UNETLoader", "Shared H3 model · DaSiWa Hybrid v4 Turbo", 690, 60,
      {"unet_name": MODEL, "weight_dtype": "default"}, [510, 130])
-node("attention", "ModelAttentionBackend", "Attention backend", 690, 260, {"attention": "pytorch attention"}, [510, 100])
+node("attention", "ModelAttentionBackend", "Attention backend", 690, 260, {"attention": "comfy kitchen attention"}, [510, 100])
 node("shift", "MiniMaxH3SigmaShift", "Shared H3 video / audio shifts", 690, 430, {"shift_video": 7.0, "shift_audio": 4.0}, [510, 140])
 link("model", 0, "attention", "model")
 link("attention", 0, "shift", "model")
 node("clip", "CLIPLoader", "Shared H3 text / vision encoder", 1280, 60,
-     {"clip_name": "qwen3vl_32b_minimax_h3_nvfp4_awq.safetensors", "type": "minimax"}, [540, 150])
-node("video_vae", "VAELoader", "Shared H3 video VAE", 1280, 290, {"vae_name": "minimax_h3_video_vae_fp16.safetensors"}, [540, 100])
-node("audio_vae", "VAELoader", "Shared H3 audio VAE", 1280, 460, {"vae_name": "minimax_h3_audio_vae_fp32.safetensors"}, [540, 100])
+     {"clip_name": TEXT_ENCODER, "type": "minimax"}, [540, 150])
+node("video_vae", "VAELoader", "Shared H3 video VAE", 1280, 290, {"vae_name": VIDEO_VAE}, [540, 100])
+node("audio_vae", "VAELoader", "Shared H3 audio VAE", 1280, 460, {"vae_name": AUDIO_VAE}, [540, 100])
 node("seed", "PrimitiveInt", "Shared seed · clip N uses seed + N − 1", 3300, 60, {"value": 741101}, [310, 110])
 node("width", "PrimitiveInt", "Shared width · multiple of 32", 1890, 60, {"value": 832}, [320, 90])
 node("height", "PrimitiveInt", "Shared height · multiple of 32", 1890, 230, {"value": 480}, [320, 90])
@@ -306,7 +310,8 @@ def annotate(workflow, server, version):
                 props["cnr_id"], props["ver"] = "comfy-core", core
             for value in n.get("widgets_values") or []:
                 if value in DOWNLOADS:
-                    props["models"] = [{"name": value, "url": f"{HF}/{DOWNLOADS[value]}/{value}", "directory": DOWNLOADS[value]}]
+                    folder, source = DOWNLOADS[value]
+                    props["models"] = [{"name": value, "url": f"{HF}/{folder}/{source}", "directory": folder}]
 
 
 def fetch(server):
