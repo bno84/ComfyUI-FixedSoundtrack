@@ -16,13 +16,10 @@ Workflows in `example_workflows/` are tracked directly. Edit them in ComfyUI
 and commit the exported editor JSON, including native subgraphs and layout.
 Keep `cnr_id` entries on every backend node, including nodes inside subgraphs.
 
-Use the bno84 Git identity and signed conventional commits. Commit bodies
-explain the change, then `### Why` and relevant `### Testing` notes.
-Append `Assisted-by: MODEL-ID` when creating or significantly changing commits.
-Do not add redundant Co-Authored-By lines for agents.
+Use the bno84 Git identity and signed conventional commits.
 
 Run the tests with ComfyUI on `PYTHONPATH` and the continuation pack beside
 this one: `python -m unittest discover -s tests -v`.
 
-Publishing and remote pushes require user authorization. Local development
-does not require or access Registry tokens.
+Publishing requires user authorization.
+Local development does not require or access Registry tokens.
