@@ -19,56 +19,56 @@
   },
   "22": {
     "inputs": {
-      "image": "fixedsoundtrack-subject.png"
+      "image": "ref-closeup.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "Clip 1 · <Picture 1> · subject"
+      "title": "Clip 1 · <Picture 1>"
     }
   },
   "23": {
     "inputs": {
-      "image": "fixedsoundtrack-setting.png"
+      "image": "ref-pose.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "Clip 1 · <Picture 2> · setting"
+      "title": "Clip 1 · <Picture 2>"
     }
   },
   "34": {
     "inputs": {
-      "image": "fixedsoundtrack-subject.png"
+      "image": "ref-closeup.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "Clip 2 · <Picture 1> · subject"
+      "title": "Clip 2 · <Picture 1>"
     }
   },
   "35": {
     "inputs": {
-      "image": "fixedsoundtrack-setting.png"
+      "image": "ref-pose.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "Clip 2 · <Picture 2> · setting"
+      "title": "Clip 2 · <Picture 2>"
     }
   },
   "49": {
     "inputs": {
-      "image": "fixedsoundtrack-subject.png"
+      "image": "ref-closeup.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "Clip 3 · <Picture 1> · subject"
+      "title": "Clip 3 · <Picture 1>"
     }
   },
   "50": {
     "inputs": {
-      "image": "fixedsoundtrack-setting.png"
+      "image": "ref-pose.png"
     },
     "class_type": "LoadImage",
     "_meta": {
-      "title": "Clip 3 · <Picture 2> · setting"
+      "title": "Clip 3 · <Picture 2>"
     }
   },
   "69": {
@@ -327,7 +327,7 @@
   },
   "73:24": {
     "inputs": {
-      "prompt": "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 1 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. A gentle camera push-in begins as the performer turns toward the camera.",
+      "prompt": "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 1 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>.\n\ndetailed_description:\n<Subject 1> starts low in the crouching cat pose from <Picture 2> and swipes one hand like a paw. She rises onto her feet on the beat and starts to dance, singing with lip movements synchronized to the soundtrack. The camera slowly pushes in.",
       "width": [
         "77:9",
         0
@@ -501,7 +501,7 @@
   },
   "74:36": {
     "inputs": {
-      "prompt": "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 2 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the camera movement while the performer gestures and takes a small step forward.",
+      "prompt": "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 2 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> keeps dancing to the fast pop beat with playful cat gestures: paw swipes, head tilts and a hip sway, the bell on her collar swinging. She keeps singing in sync with the soundtrack while the camera arcs slowly around her.",
       "width": [
         "77:9",
         0
@@ -765,7 +765,7 @@
   },
   "75:51": {
     "inputs": {
-      "prompt": "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 3 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the performance and camera movement, ending on a calm, expressive close-up.",
+      "prompt": "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 3 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> steps toward the camera and finishes the line with a final paw pose. The camera settles into a close-up framed like <Picture 1>, her half-lidded, unimpressed expression held as the music continues.",
       "width": [
         "77:9",
         0

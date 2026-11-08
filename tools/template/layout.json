@@ -20,7 +20,7 @@
     180
    ]
   },
-  "Clip 1 · <Picture 1> · subject": {
+  "Clip 1 · <Picture 1>": {
    "pos": [
     11,
     1159
@@ -30,7 +30,7 @@
     350
    ]
   },
-  "Clip 1 · <Picture 2> · setting": {
+  "Clip 1 · <Picture 2>": {
    "pos": [
     335,
     1159
@@ -40,7 +40,7 @@
     350
    ]
   },
-  "Clip 2 · <Picture 1> · subject": {
+  "Clip 2 · <Picture 1>": {
    "pos": [
     707,
     1157
@@ -50,7 +50,7 @@
     350
    ]
   },
-  "Clip 2 · <Picture 2> · setting": {
+  "Clip 2 · <Picture 2>": {
    "pos": [
     1030,
     1156
@@ -60,7 +60,7 @@
     350
    ]
   },
-  "Clip 3 · <Picture 1> · subject": {
+  "Clip 3 · <Picture 1>": {
    "pos": [
     1415,
     1157
@@ -70,7 +70,7 @@
     350
    ]
   },
-  "Clip 3 · <Picture 2> · setting": {
+  "Clip 3 · <Picture 2>": {
    "pos": [
     1737,
     1155

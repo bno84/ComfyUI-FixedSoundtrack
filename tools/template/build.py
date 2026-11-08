@@ -41,7 +41,22 @@ DOWNLOADS = {
     VIDEO_VAE: ("vae", "minimax_h3_video_vae_fp16.safetensors"),
     AUDIO_VAE: ("vae", "minimax_h3_audio_vae_fp32.safetensors"),
 }
-INPUTS = ["fixedsoundtrack-subject.png", "fixedsoundtrack-setting.png", "fixedsoundtrack-song.webm"]
+REFERENCES = ["ref-closeup.png", "ref-pose.png"]
+INPUTS = [*REFERENCES, "fixedsoundtrack-song.webm"]
+# Both references show the same character; the prompts name what each one contributes.
+SUBJECT = ("subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. "
+           "<Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. "
+           "She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips "
+           "with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\n")
+ACTIONS = [
+    "<Subject 1> starts low in the crouching cat pose from <Picture 2> and swipes one hand like a paw. "
+    "She rises onto her feet on the beat and starts to dance, singing with lip movements synchronized to the soundtrack. "
+    "The camera slowly pushes in.",
+    "<Subject 1> keeps dancing to the fast pop beat with playful cat gestures: paw swipes, head tilts and a hip sway, "
+    "the bell on her collar swinging. She keeps singing in sync with the soundtrack while the camera arcs slowly around her.",
+    "<Subject 1> steps toward the camera and finishes the line with a final paw pose. The camera settles into a close-up "
+    "framed like <Picture 1>, her half-lidded, unimpressed expression held as the music continues.",
+]
 nodes, links, groups = [], [], []
 
 
@@ -111,16 +126,14 @@ for i in range(1, 4):
     node(p+"frames", "PrimitiveInt", f"Clip {i} · {'total frames · 5 + 17n' if i == 1 else 'NEW frames · multiple of 17'}", x+30, 910,
          {"value": 124 if i == 1 else 119}, [500, 90])
     link(p+"frames", 0, "audio_duration", f"values.{chr(96+i)}")
-    for j, label in enumerate(["subject", "setting"]):
-        node(p+f"ref{j}", "LoadImage", f"Clip {i} · <Picture {j+1}> · {label}", x+30+j*590, 1120,
-             {"image": f"fixedsoundtrack-{label}.png"}, [510, 480])
-    prompt = (f"subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. "
-              f"<Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment {i} of three.\n\n"
-              "retention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\n"
-              "detailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. "
-              + ["A gentle camera push-in begins as the performer turns toward the camera.",
-                 "Continue the camera movement while the performer gestures and takes a small step forward.",
-                 "Continue the performance and camera movement, ending on a calm, expressive close-up."][i-1])
+    for j, reference in enumerate(REFERENCES):
+        node(p+f"ref{j}", "LoadImage", f"Clip {i} · <Picture {j+1}>", x+30+j*590, 1120,
+             {"image": reference}, [510, 480])
+    prompt = (SUBJECT + f"summary:\nA continuous, energetic pop-dance music video about a cat, segment {i} of three.\n\n"
+              "retention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, "
+              "and the plain grey concrete studio with its diagonal shadow from <Picture 2>."
+              + (" Continue the preceding movement naturally." if i > 1 else "") + "\n\n"
+              "detailed_description:\n" + ACTIONS[i-1])
     node(p+"ref2va", "MiniMaxH3ReferenceToVideo", f"Clip {i} · Ref2VA prompt & references", x+30, 1710,
          {"prompt": prompt, "ref_image_size": "match"}, [590, 610])
     for source, name in [("clip", "clip"), ("video_vae", "vae"), ("audio_vae", "audio_vae"), ("width", "width"), ("height", "height")]:

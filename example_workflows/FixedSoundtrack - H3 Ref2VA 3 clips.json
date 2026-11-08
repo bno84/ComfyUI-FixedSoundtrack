@@ -1,5 +1,5 @@
 {
-  "id": "549e3353-a47e-4a25-a3c2-fe6beb1986d6",
+  "id": "bcd9b89b-06d2-4066-a67c-50087ba0a8ac",
   "revision": 0,
   "last_node_id": 77,
   "last_link_id": 417,
@@ -113,18 +113,18 @@
           "links": null
         }
       ],
-      "title": "Clip 1 · <Picture 1> · subject",
+      "title": "Clip 1 · <Picture 1>",
       "properties": {
         "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
         "ver": "0.38.0"
       },
       "widgets_values": [
-        "fixedsoundtrack-subject.png",
+        "ref-closeup.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "fixedsoundtrack-subject.png",
+        "image": "ref-closeup.png",
         "upload": "image"
       }
     },
@@ -157,18 +157,18 @@
           "links": null
         }
       ],
-      "title": "Clip 1 · <Picture 2> · setting",
+      "title": "Clip 1 · <Picture 2>",
       "properties": {
         "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
         "ver": "0.38.0"
       },
       "widgets_values": [
-        "fixedsoundtrack-setting.png",
+        "ref-pose.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "fixedsoundtrack-setting.png",
+        "image": "ref-pose.png",
         "upload": "image"
       }
     },
@@ -201,18 +201,18 @@
           "links": null
         }
       ],
-      "title": "Clip 2 · <Picture 1> · subject",
+      "title": "Clip 2 · <Picture 1>",
       "properties": {
         "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
         "ver": "0.38.0"
       },
       "widgets_values": [
-        "fixedsoundtrack-subject.png",
+        "ref-closeup.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "fixedsoundtrack-subject.png",
+        "image": "ref-closeup.png",
         "upload": "image"
       }
     },
@@ -245,18 +245,18 @@
           "links": null
         }
       ],
-      "title": "Clip 2 · <Picture 2> · setting",
+      "title": "Clip 2 · <Picture 2>",
       "properties": {
         "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
         "ver": "0.38.0"
       },
       "widgets_values": [
-        "fixedsoundtrack-setting.png",
+        "ref-pose.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "fixedsoundtrack-setting.png",
+        "image": "ref-pose.png",
         "upload": "image"
       }
     },
@@ -289,18 +289,18 @@
           "links": null
         }
       ],
-      "title": "Clip 3 · <Picture 1> · subject",
+      "title": "Clip 3 · <Picture 1>",
       "properties": {
         "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
         "ver": "0.38.0"
       },
       "widgets_values": [
-        "fixedsoundtrack-subject.png",
+        "ref-closeup.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "fixedsoundtrack-subject.png",
+        "image": "ref-closeup.png",
         "upload": "image"
       }
     },
@@ -333,18 +333,18 @@
           "links": null
         }
       ],
-      "title": "Clip 3 · <Picture 2> · setting",
+      "title": "Clip 3 · <Picture 2>",
       "properties": {
         "Node name for S&R": "LoadImage",
         "cnr_id": "comfy-core",
         "ver": "0.38.0"
       },
       "widgets_values": [
-        "fixedsoundtrack-setting.png",
+        "ref-pose.png",
         "image"
       ],
       "widgets_values_named": {
-        "image": "fixedsoundtrack-setting.png",
+        "image": "ref-pose.png",
         "upload": "image"
       }
     },
@@ -465,7 +465,7 @@
     },
     {
       "id": 72,
-      "type": "a3930f8c-d369-4ecd-9bc9-1cd75c607ce2",
+      "type": "5f3e6202-076e-4515-bc81-dc79c81ed1af",
       "pos": [
         2204,
         125
@@ -539,7 +539,7 @@
     },
     {
       "id": 73,
-      "type": "52a9023c-4186-4905-a505-9a6171629012",
+      "type": "36201e7f-276e-465e-9d3d-c1a4f6815efd",
       "pos": [
         0,
         1570
@@ -672,20 +672,20 @@
         124,
         768,
         124,
-        "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 1 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. A gentle camera push-in begins as the performer turns toward the camera.",
+        "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 1 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>.\n\ndetailed_description:\n<Subject 1> starts low in the crouching cat pose from <Picture 2> and swipes one hand like a paw. She rises onto her feet on the beat and starts to dance, singing with lip movements synchronized to the soundtrack. The camera slowly pushes in.",
         "match"
       ],
       "widgets_values_named": {
         "width": 124,
         "height": 768,
         "length": 124,
-        "prompt": "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 1 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. A gentle camera push-in begins as the performer turns toward the camera.",
+        "prompt": "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 1 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>.\n\ndetailed_description:\n<Subject 1> starts low in the crouching cat pose from <Picture 2> and swipes one hand like a paw. She rises onto her feet on the beat and starts to dance, singing with lip movements synchronized to the soundtrack. The camera slowly pushes in.",
         "reference_image_size": "match"
       }
     },
     {
       "id": 74,
-      "type": "51b3d6b4-0c61-4a68-ad84-121ea30dc0f3",
+      "type": "f1f56437-b892-437d-a242-7c2a05792fb2",
       "pos": [
         700,
         1570
@@ -850,7 +850,7 @@
         22,
         119,
         0,
-        "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 2 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the camera movement while the performer gestures and takes a small step forward.",
+        "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 2 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> keeps dancing to the fast pop beat with playful cat gestures: paw swipes, head tilts and a hip sway, the bell on her collar swinging. She keeps singing in sync with the soundtrack while the camera arcs slowly around her.",
         "match"
       ],
       "widgets_values_named": {
@@ -859,13 +859,13 @@
         "overlap_frames": 22,
         "extension_frames": 119,
         "start_frame": 0,
-        "prompt": "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 2 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the camera movement while the performer gestures and takes a small step forward.",
+        "prompt": "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 2 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> keeps dancing to the fast pop beat with playful cat gestures: paw swipes, head tilts and a hip sway, the bell on her collar swinging. She keeps singing in sync with the soundtrack while the camera arcs slowly around her.",
         "reference_image_size": "match"
       }
     },
     {
       "id": 75,
-      "type": "0ffbd73f-19f5-4cc0-917b-6cd6a2ccc25c",
+      "type": "845eac6a-f577-41d7-8327-ff6804622531",
       "pos": [
         1400,
         1570
@@ -1022,7 +1022,7 @@
         22,
         119,
         0,
-        "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 3 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the performance and camera movement, ending on a calm, expressive close-up.",
+        "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 3 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> steps toward the camera and finishes the line with a final paw pose. The camera settles into a close-up framed like <Picture 1>, her half-lidded, unimpressed expression held as the music continues.",
         "match"
       ],
       "widgets_values_named": {
@@ -1031,13 +1031,13 @@
         "overlap_frames": 22,
         "extension_frames": 119,
         "start_frame": 0,
-        "prompt": "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 3 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the performance and camera movement, ending on a calm, expressive close-up.",
+        "prompt": "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 3 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> steps toward the camera and finishes the line with a final paw pose. The camera settles into a close-up framed like <Picture 1>, her half-lidded, unimpressed expression held as the music continues.",
         "reference_image_size": "match"
       }
     },
     {
       "id": 76,
-      "type": "d22b8dc5-31f1-4bae-81ad-f5ca7b906505",
+      "type": "8c4636f8-390e-4d08-8e49-a1fad54f3ee6",
       "pos": [
         1515,
         593
@@ -1102,7 +1102,7 @@
     },
     {
       "id": 77,
-      "type": "c4d07452-fec6-44b9-99ac-ef4d5566c74d",
+      "type": "7b24e64c-cf34-4b0b-88a2-2e926f8147d5",
       "pos": [
         596,
         123
@@ -1804,7 +1804,7 @@
   "definitions": {
     "subgraphs": [
       {
-        "id": "a3930f8c-d369-4ecd-9bc9-1cd75c607ce2",
+        "id": "5f3e6202-076e-4515-bc81-dc79c81ed1af",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -1835,7 +1835,7 @@
         },
         "inputs": [
           {
-            "id": "4eed1866-7a5c-44c9-a3e8-ed77368babf4",
+            "id": "498e0ad2-a2fd-4c5c-944c-87c5cd1fbc17",
             "name": "av_latent",
             "type": "LATENT",
             "linkIds": [
@@ -1849,7 +1849,7 @@
             ]
           },
           {
-            "id": "24d58397-d08e-4a19-a75a-ff28398eeaa8",
+            "id": "3c6b025a-a760-46c6-9102-1ca975ce0e6a",
             "name": "vae",
             "type": "VAE",
             "linkIds": [
@@ -1863,7 +1863,7 @@
             ]
           },
           {
-            "id": "c2e6f92f-ea0f-4c18-90af-9e10f87aa201",
+            "id": "db1db8d0-920e-42a8-8ece-a812c66fd5a6",
             "name": "vae_1",
             "type": "VAE",
             "linkIds": [
@@ -1877,7 +1877,7 @@
             ]
           },
           {
-            "id": "a990d76a-5464-47e3-ba8c-e4aa6c8d457f",
+            "id": "c0655f52-c414-4c8c-9505-3b78bf9d6680",
             "name": "on_true",
             "type": "AUDIO",
             "linkIds": [
@@ -1892,7 +1892,7 @@
             ]
           },
           {
-            "id": "b69cf6d9-a86c-419c-ae1f-eef40f174799",
+            "id": "c659cd0d-30cf-46ef-a57d-323ce88d8b3b",
             "name": "vae_tile_size",
             "type": "INT",
             "linkIds": [
@@ -1904,7 +1904,7 @@
             ]
           },
           {
-            "id": "38cd8bf6-d777-4ea4-b719-972fa822347c",
+            "id": "d7382788-4853-44d5-b97e-234290991ed4",
             "name": "vae_tile_overlap",
             "type": "INT",
             "linkIds": [
@@ -1916,7 +1916,7 @@
             ]
           },
           {
-            "id": "a03c3481-8ecf-4bf5-b2d8-9e9cd1ed585c",
+            "id": "d7926bf8-1780-424e-8d76-1d80fb4aa654",
             "name": "vae_temporal_size",
             "type": "INT",
             "linkIds": [
@@ -1928,7 +1928,7 @@
             ]
           },
           {
-            "id": "cb3f97e8-7094-4040-8e0a-d9c6e9ec1f79",
+            "id": "9a1de100-6831-4cf8-8d92-c955b77c31d8",
             "name": "vae_temporal_overlap",
             "type": "INT",
             "linkIds": [
@@ -1940,7 +1940,7 @@
             ]
           },
           {
-            "id": "4c7e62e6-e433-49fb-aabd-8ddecb8905c4",
+            "id": "ebceeb7a-b28a-4a69-8912-8e31b937d689",
             "name": "use_original_soundtrack",
             "type": "BOOLEAN",
             "linkIds": [
@@ -1952,7 +1952,7 @@
             ]
           },
           {
-            "id": "a9fa32b5-bbc6-4a8c-beb0-2f103d67accc",
+            "id": "658f1095-016f-4ffa-b112-0bba5f4bad49",
             "name": "video_bit_depth",
             "type": "COMBO",
             "linkIds": [
@@ -1964,7 +1964,7 @@
             ]
           },
           {
-            "id": "7cbbc169-f0ed-4cde-8851-fec7f8e487d2",
+            "id": "711d9c44-86a6-4193-982a-0a666ddb5a51",
             "name": "video_color_space",
             "type": "COMBO",
             "linkIds": [
@@ -1978,7 +1978,7 @@
         ],
         "outputs": [
           {
-            "id": "bc1437ca-bc47-407b-a9f1-ce88b4e24fe1",
+            "id": "ecd90276-ed91-4f8c-83a0-c0ab80b891dc",
             "name": "VIDEO",
             "type": "VIDEO",
             "linkIds": [
@@ -2462,7 +2462,7 @@
         "extra": {}
       },
       {
-        "id": "52a9023c-4186-4905-a505-9a6171629012",
+        "id": "36201e7f-276e-465e-9d3d-c1a4f6815efd",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -2493,7 +2493,7 @@
         },
         "inputs": [
           {
-            "id": "44583b00-3327-4085-afb5-32bfb0fbcb54",
+            "id": "f096a4fb-275f-49b5-b794-0def62345a79",
             "name": "clip",
             "type": "CLIP",
             "linkIds": [
@@ -2507,7 +2507,7 @@
             ]
           },
           {
-            "id": "7256af1a-bf55-4da4-a87c-773caad47be3",
+            "id": "9f6c91e6-4115-4233-87bb-8f2773cc4eff",
             "name": "vae",
             "type": "VAE",
             "linkIds": [
@@ -2522,7 +2522,7 @@
             ]
           },
           {
-            "id": "e48fa2aa-8dae-4e77-b670-fc33f3bbdc31",
+            "id": "7e305af5-c34d-4280-a293-eb8c2a9dfa2f",
             "name": "audio_vae",
             "type": "VAE",
             "linkIds": [
@@ -2537,7 +2537,7 @@
             ]
           },
           {
-            "id": "2fadb0e2-6d5e-4461-a1f4-04ce1c9e2a6c",
+            "id": "c4d03e58-38e4-4148-8dec-ee1a512708f0",
             "name": "ref_images.ref_image_0",
             "type": "IMAGE",
             "linkIds": [
@@ -2552,7 +2552,7 @@
             ]
           },
           {
-            "id": "fc68a889-efdb-4cfb-86ff-9e0054c10f93",
+            "id": "d4d11d3b-eb58-4c54-a972-d680b8533db7",
             "name": "ref_images.ref_image_1",
             "type": "IMAGE",
             "linkIds": [
@@ -2567,7 +2567,7 @@
             ]
           },
           {
-            "id": "a2e1739d-6552-4670-8c71-0a1fc1f3f6c0",
+            "id": "c1aea892-323a-47ff-a631-931596cd6901",
             "name": "width",
             "type": "INT",
             "linkIds": [
@@ -2580,7 +2580,7 @@
             ]
           },
           {
-            "id": "1c44b298-f3bd-4f7d-826b-27d5566e2baa",
+            "id": "4e1fdf0d-8085-4dbc-b30e-b951d83ef7d3",
             "name": "height",
             "type": "INT",
             "linkIds": [
@@ -2593,7 +2593,7 @@
             ]
           },
           {
-            "id": "5bc97651-a48a-49c6-afac-b94453562abb",
+            "id": "1614f9b1-b5ff-43ec-8751-115e46802f95",
             "name": "length",
             "type": "INT",
             "linkIds": [
@@ -2606,7 +2606,7 @@
             ]
           },
           {
-            "id": "6153a63c-26b2-4ea2-aea0-183dcef11227",
+            "id": "bba7ca9d-bae0-4cc1-9d70-36a347588f19",
             "name": "master_audio_latent",
             "type": "LATENT",
             "linkIds": [
@@ -2620,7 +2620,7 @@
             ]
           },
           {
-            "id": "06365263-5e29-4356-a25f-f6b4ff18fe73",
+            "id": "31e233e5-5aa5-4f24-8e48-8db398171c1c",
             "name": "mask",
             "type": "MASK",
             "linkIds": [
@@ -2634,7 +2634,7 @@
             ]
           },
           {
-            "id": "00bae795-d876-4df8-bf65-cba8ca3a543e",
+            "id": "c43aef3f-d236-4cfd-9e0a-63ca95099630",
             "name": "model",
             "type": "MODEL",
             "linkIds": [
@@ -2648,7 +2648,7 @@
             ]
           },
           {
-            "id": "0d5d3991-a008-4543-8ef2-adfd46f9306d",
+            "id": "c9bc86dc-a827-4925-bf3f-308a8d59750c",
             "name": "values.a",
             "type": "FLOAT,INT,BOOLEAN",
             "linkIds": [
@@ -2662,7 +2662,7 @@
             ]
           },
           {
-            "id": "2c5dbf84-cff5-4720-b4af-048c8feec09d",
+            "id": "f69353fb-a53d-43db-88cf-70c9d335bf23",
             "name": "sampler",
             "type": "SAMPLER",
             "linkIds": [
@@ -2676,7 +2676,7 @@
             ]
           },
           {
-            "id": "eab43bbb-fbec-4cf2-b190-dbf9123114fe",
+            "id": "6ee2b187-da21-4e48-9396-7b1ca6666264",
             "name": "sigmas",
             "type": "SIGMAS",
             "linkIds": [
@@ -2690,7 +2690,7 @@
             ]
           },
           {
-            "id": "bf45ede9-3da9-4eb6-b9c8-19c39235359b",
+            "id": "0a91ba44-d382-45b9-b173-250fd0330237",
             "name": "prompt",
             "type": "STRING",
             "linkIds": [
@@ -2702,7 +2702,7 @@
             ]
           },
           {
-            "id": "edb56325-529b-458c-9320-984ba58eda38",
+            "id": "df88abc3-2ef7-4caa-904f-722995be12d8",
             "name": "reference_image_size",
             "type": "COMBO",
             "linkIds": [
@@ -2714,7 +2714,7 @@
             ]
           },
           {
-            "id": "241fecde-da38-410e-8f07-8c80d280dc6c",
+            "id": "ab15fb40-4177-403d-87bd-be89260e1441",
             "name": "optional_reference_3",
             "type": "IMAGE",
             "linkIds": [
@@ -2729,7 +2729,7 @@
         ],
         "outputs": [
           {
-            "id": "7aa8440b-367b-4b6e-9872-c20c94e6ebb0",
+            "id": "588f644c-7bc2-4506-9d5a-e8219c0b04a5",
             "name": "output",
             "type": "LATENT",
             "linkIds": [
@@ -2901,14 +2901,14 @@
               "ver": "0.38.0"
             },
             "widgets_values": [
-              "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 1 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. A gentle camera push-in begins as the performer turns toward the camera.",
+              "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 1 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>.\n\ndetailed_description:\n<Subject 1> starts low in the crouching cat pose from <Picture 2> and swipes one hand like a paw. She rises onto her feet on the beat and starts to dance, singing with lip movements synchronized to the soundtrack. The camera slowly pushes in.",
               1344,
               768,
               124,
               "match"
             ],
             "widgets_values_named": {
-              "prompt": "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 1 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. A gentle camera push-in begins as the performer turns toward the camera.",
+              "prompt": "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 1 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>.\n\ndetailed_description:\n<Subject 1> starts low in the crouching cat pose from <Picture 2> and swipes one hand like a paw. She rises onto her feet on the beat and starts to dance, singing with lip movements synchronized to the soundtrack. The camera slowly pushes in.",
               "width": 1344,
               "height": 768,
               "length": 124,
@@ -3573,7 +3573,7 @@
         "extra": {}
       },
       {
-        "id": "51b3d6b4-0c61-4a68-ad84-121ea30dc0f3",
+        "id": "f1f56437-b892-437d-a242-7c2a05792fb2",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -3604,7 +3604,7 @@
         },
         "inputs": [
           {
-            "id": "aecfe18f-a261-42b4-baeb-0b2aa76adeee",
+            "id": "e9085231-9bd6-49f8-8f46-a36cdd9242b1",
             "name": "clip",
             "type": "CLIP",
             "linkIds": [
@@ -3618,7 +3618,7 @@
             ]
           },
           {
-            "id": "3960b7a7-62d0-4cfc-a4c3-f1917b2f8049",
+            "id": "05f40876-9627-431e-8b0c-9aee3d21be79",
             "name": "vae",
             "type": "VAE",
             "linkIds": [
@@ -3633,7 +3633,7 @@
             ]
           },
           {
-            "id": "4e201cea-bdcc-4e54-8e50-bef09f94d7fc",
+            "id": "230a163a-2952-44ce-b792-714bd1a9c901",
             "name": "audio_vae",
             "type": "VAE",
             "linkIds": [
@@ -3648,7 +3648,7 @@
             ]
           },
           {
-            "id": "fe293fb6-6efb-4f7c-bdcd-f5d5bc1dbb90",
+            "id": "0e805e8f-81cf-4901-a50d-7f5b2a17b7a3",
             "name": "ref_images.ref_image_0",
             "type": "IMAGE",
             "linkIds": [
@@ -3663,7 +3663,7 @@
             ]
           },
           {
-            "id": "9e8832f7-e49a-4085-9674-fd4f84e6089a",
+            "id": "86481b61-c99e-4231-a401-8f083d803180",
             "name": "ref_images.ref_image_1",
             "type": "IMAGE",
             "linkIds": [
@@ -3678,7 +3678,7 @@
             ]
           },
           {
-            "id": "fae4463c-5b43-4a4a-91aa-931e27959086",
+            "id": "0fa3eb85-0d3a-409f-ab5c-e161a46693fe",
             "name": "width",
             "type": "INT",
             "linkIds": [
@@ -3691,7 +3691,7 @@
             ]
           },
           {
-            "id": "dd49eb06-e097-451d-90f3-ceab4f1623d2",
+            "id": "33055a63-e1bd-487d-a31f-ee2e8e072a3a",
             "name": "height",
             "type": "INT",
             "linkIds": [
@@ -3704,7 +3704,7 @@
             ]
           },
           {
-            "id": "2e22cad1-a129-4e8e-b2e9-32828689a016",
+            "id": "877d741b-9a6b-4d0f-bcd9-c2b41a6d3828",
             "name": "previous_av_latent",
             "type": "LATENT",
             "linkIds": [
@@ -3721,7 +3721,7 @@
             ]
           },
           {
-            "id": "c9ae3a6d-7851-4086-a990-c16a2833bb73",
+            "id": "67c11657-fe87-4537-89d0-5b88bb82d9a5",
             "name": "overlap_frames",
             "type": "INT",
             "linkIds": [
@@ -3734,7 +3734,7 @@
             ]
           },
           {
-            "id": "fddbe712-209a-48ee-8c7c-4f5752543b8e",
+            "id": "7c1faa60-7455-4b35-b274-7c21b0c70a1e",
             "name": "extension_frames",
             "type": "INT",
             "linkIds": [
@@ -3747,7 +3747,7 @@
             ]
           },
           {
-            "id": "5ef34c7e-5d01-418d-baea-f3b07e040ff1",
+            "id": "0f08cadf-5d6c-4035-803f-bcf53dc06352",
             "name": "master_audio_latent",
             "type": "LATENT",
             "linkIds": [
@@ -3761,7 +3761,7 @@
             ]
           },
           {
-            "id": "a46ecd39-2d57-4ea4-ac8b-32b3718383aa",
+            "id": "2dea9b28-cb82-4056-8909-c84d87470fee",
             "name": "start_frame",
             "type": "INT",
             "linkIds": [
@@ -3774,7 +3774,7 @@
             ]
           },
           {
-            "id": "ea2b8ba4-4c46-4669-909a-2cdcdc6726be",
+            "id": "6f4fc6ff-7e38-47c5-85ab-63cc627c8359",
             "name": "mask",
             "type": "MASK",
             "linkIds": [
@@ -3788,7 +3788,7 @@
             ]
           },
           {
-            "id": "bb63f822-e93e-4995-b8f2-ebff0ae46189",
+            "id": "adefdcc9-456e-4a43-9911-b80aa17794b6",
             "name": "model",
             "type": "MODEL",
             "linkIds": [
@@ -3802,7 +3802,7 @@
             ]
           },
           {
-            "id": "d783deda-ec3f-45c4-8615-bff32a565fa8",
+            "id": "3a5cbf37-20b6-421d-b797-63ada8223b52",
             "name": "values.a",
             "type": "FLOAT,INT,BOOLEAN",
             "linkIds": [
@@ -3816,7 +3816,7 @@
             ]
           },
           {
-            "id": "b80c9e63-3a26-4784-97e0-16384efe05ca",
+            "id": "c750c607-4d2d-44a5-ac51-81220c749036",
             "name": "sampler",
             "type": "SAMPLER",
             "linkIds": [
@@ -3830,7 +3830,7 @@
             ]
           },
           {
-            "id": "be3e1f0e-b933-45c8-b026-2ba667836b57",
+            "id": "5297e9a8-b5b0-4c25-aa19-ff7fb0472832",
             "name": "sigmas",
             "type": "SIGMAS",
             "linkIds": [
@@ -3844,7 +3844,7 @@
             ]
           },
           {
-            "id": "d0fab695-7dad-46a9-baa8-7b7cf3a337f7",
+            "id": "531a96f2-c577-40c4-b681-0bf64a7d2eea",
             "name": "prompt",
             "type": "STRING",
             "linkIds": [
@@ -3856,7 +3856,7 @@
             ]
           },
           {
-            "id": "e730caf7-44bf-4b19-81f1-072922beaf03",
+            "id": "c04bec92-9388-452a-9869-6ddf7de14f87",
             "name": "reference_image_size",
             "type": "COMBO",
             "linkIds": [
@@ -3868,7 +3868,7 @@
             ]
           },
           {
-            "id": "f8026a91-43bb-43fd-bd4f-968ba3ec48d5",
+            "id": "2e857ea0-10f5-456b-b9a4-309c51181270",
             "name": "optional_reference_3",
             "type": "IMAGE",
             "linkIds": [
@@ -3883,7 +3883,7 @@
         ],
         "outputs": [
           {
-            "id": "b7e74f7d-e862-4352-ad17-46100833f219",
+            "id": "54364c8c-90a4-4ac3-8210-99f6908eb4ac",
             "name": "latent",
             "type": "LATENT",
             "linkIds": [
@@ -3897,7 +3897,7 @@
             ]
           },
           {
-            "id": "4ed289c5-7d43-4769-9287-ef9b5342c759",
+            "id": "a7c31693-0b1f-4de3-9d10-790f80c55f20",
             "name": "total_length",
             "type": "INT",
             "linkIds": [
@@ -4066,14 +4066,14 @@
               "ver": "0.38.0"
             },
             "widgets_values": [
-              "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 2 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the camera movement while the performer gestures and takes a small step forward.",
+              "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 2 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> keeps dancing to the fast pop beat with playful cat gestures: paw swipes, head tilts and a hip sway, the bell on her collar swinging. She keeps singing in sync with the soundtrack while the camera arcs slowly around her.",
               1344,
               768,
               124,
               "match"
             ],
             "widgets_values_named": {
-              "prompt": "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 2 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the camera movement while the performer gestures and takes a small step forward.",
+              "prompt": "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 2 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> keeps dancing to the fast pop beat with playful cat gestures: paw swipes, head tilts and a hip sway, the bell on her collar swinging. She keeps singing in sync with the soundtrack while the camera arcs slowly around her.",
               "width": 1344,
               "height": 768,
               "length": 124,
@@ -5150,7 +5150,7 @@
         "extra": {}
       },
       {
-        "id": "0ffbd73f-19f5-4cc0-917b-6cd6a2ccc25c",
+        "id": "845eac6a-f577-41d7-8327-ff6804622531",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -5181,7 +5181,7 @@
         },
         "inputs": [
           {
-            "id": "46994631-7138-4dd8-98e7-14a183eacadb",
+            "id": "7269e5f7-3849-40fa-9acf-0d7f227615a3",
             "name": "clip",
             "type": "CLIP",
             "linkIds": [
@@ -5195,7 +5195,7 @@
             ]
           },
           {
-            "id": "34bed321-e1ea-4dbf-a920-41d74e19fd29",
+            "id": "2c2fffe8-22d6-4797-8c7e-9cc5153bf82e",
             "name": "vae",
             "type": "VAE",
             "linkIds": [
@@ -5210,7 +5210,7 @@
             ]
           },
           {
-            "id": "44f3ea40-19b4-4d39-8896-0e654799939a",
+            "id": "d07f3839-c8be-448a-aac3-ee446f051834",
             "name": "audio_vae",
             "type": "VAE",
             "linkIds": [
@@ -5225,7 +5225,7 @@
             ]
           },
           {
-            "id": "98c3c587-6f44-4dc3-8fd5-2b8d39d24f4d",
+            "id": "3dbad032-01e2-4bde-87c2-e0ce60e53072",
             "name": "ref_images.ref_image_0",
             "type": "IMAGE",
             "linkIds": [
@@ -5240,7 +5240,7 @@
             ]
           },
           {
-            "id": "8d9ca35d-58ea-4808-8df2-3790d9c27b89",
+            "id": "f1e360b8-325c-44eb-91b5-0a91efb8d413",
             "name": "ref_images.ref_image_1",
             "type": "IMAGE",
             "linkIds": [
@@ -5255,7 +5255,7 @@
             ]
           },
           {
-            "id": "604e3eae-ebf5-40f2-b632-a27d9eaa7830",
+            "id": "35bba3cc-be22-44fd-bfdd-3679873908e2",
             "name": "width",
             "type": "INT",
             "linkIds": [
@@ -5268,7 +5268,7 @@
             ]
           },
           {
-            "id": "93c16767-942f-4648-ae5e-c0ba02d2d6c8",
+            "id": "c17ebe62-0178-4bb9-9728-d3d5e8307c0d",
             "name": "height",
             "type": "INT",
             "linkIds": [
@@ -5281,7 +5281,7 @@
             ]
           },
           {
-            "id": "22a98fc9-c57a-4904-b563-d4b869e341d2",
+            "id": "9ad0ccf8-73dc-4bca-ab72-d9724bdff583",
             "name": "previous_av_latent",
             "type": "LATENT",
             "linkIds": [
@@ -5298,7 +5298,7 @@
             ]
           },
           {
-            "id": "5a323a5d-45dd-4276-baf9-242eee27c3b6",
+            "id": "eb2ba9d0-cce8-4b65-9ebe-4184ec98db79",
             "name": "overlap_frames",
             "type": "INT",
             "linkIds": [
@@ -5311,7 +5311,7 @@
             ]
           },
           {
-            "id": "fccc525a-528f-427c-a673-c001ebc58f38",
+            "id": "1db3c599-11b5-4ab9-a6fd-80b58ad671e0",
             "name": "extension_frames",
             "type": "INT",
             "linkIds": [
@@ -5324,7 +5324,7 @@
             ]
           },
           {
-            "id": "d79e7110-56b2-4e33-9bae-c146733874a1",
+            "id": "604cc050-28ef-4282-a572-375c993fe15c",
             "name": "master_audio_latent",
             "type": "LATENT",
             "linkIds": [
@@ -5338,7 +5338,7 @@
             ]
           },
           {
-            "id": "e63056f3-5d47-4296-a6c5-db441e470d80",
+            "id": "a3f16d1c-4135-4d03-b66c-aa9334245f74",
             "name": "start_frame",
             "type": "INT",
             "linkIds": [
@@ -5351,7 +5351,7 @@
             ]
           },
           {
-            "id": "85b4b57f-c926-4501-8265-28032b74ca94",
+            "id": "93bbd869-5693-43a0-afe8-3c470d1e255f",
             "name": "mask",
             "type": "MASK",
             "linkIds": [
@@ -5365,7 +5365,7 @@
             ]
           },
           {
-            "id": "82333571-0d43-457b-82e0-d4aad0d7c91e",
+            "id": "05faae34-578c-4265-9a4f-5bce9b72f125",
             "name": "model",
             "type": "MODEL",
             "linkIds": [
@@ -5379,7 +5379,7 @@
             ]
           },
           {
-            "id": "049553c4-ddc8-4014-bc63-95900e11d625",
+            "id": "d8022405-95e5-4a4c-83d1-f0d6c973217c",
             "name": "values.a",
             "type": "FLOAT,INT,BOOLEAN",
             "linkIds": [
@@ -5393,7 +5393,7 @@
             ]
           },
           {
-            "id": "8a64c439-f6db-4ca5-950c-45357acda9b6",
+            "id": "f3c662f1-3cdf-4a8a-8c7c-30e2ce93a410",
             "name": "sampler",
             "type": "SAMPLER",
             "linkIds": [
@@ -5407,7 +5407,7 @@
             ]
           },
           {
-            "id": "2575a9a7-b2be-47e3-95d2-3e4db15b2456",
+            "id": "4ef0c61f-9447-4683-b4a5-dd12054357cc",
             "name": "sigmas",
             "type": "SIGMAS",
             "linkIds": [
@@ -5421,7 +5421,7 @@
             ]
           },
           {
-            "id": "e36fab01-34ba-44c1-8900-d06e3d9696c0",
+            "id": "d7b6429e-640a-4b7b-a2a3-f41cac32bdfb",
             "name": "prompt",
             "type": "STRING",
             "linkIds": [
@@ -5433,7 +5433,7 @@
             ]
           },
           {
-            "id": "4c306841-d3f2-4f54-b18c-a7b8b4053d2c",
+            "id": "db21e3ea-9c65-4352-b785-4ebb2e88ee10",
             "name": "reference_image_size",
             "type": "COMBO",
             "linkIds": [
@@ -5445,7 +5445,7 @@
             ]
           },
           {
-            "id": "f675f18a-0686-4bee-baa9-ee2c9d38d129",
+            "id": "66bf908a-3c59-4e2c-aecd-b97d768ca497",
             "name": "optional_reference_3",
             "type": "IMAGE",
             "linkIds": [
@@ -5460,7 +5460,7 @@
         ],
         "outputs": [
           {
-            "id": "eca4b457-481c-4309-bc9f-ce59b4f681bb",
+            "id": "b11b05de-7195-4cf1-ae46-b6b4941ef345",
             "name": "latent",
             "type": "LATENT",
             "linkIds": [
@@ -5629,14 +5629,14 @@
               "ver": "0.38.0"
             },
             "widgets_values": [
-              "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 3 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the performance and camera movement, ending on a calm, expressive close-up.",
+              "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 3 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> steps toward the camera and finishes the line with a final paw pose. The camera settles into a close-up framed like <Picture 1>, her half-lidded, unimpressed expression held as the music continues.",
               1344,
               768,
               124,
               "match"
             ],
             "widgets_values_named": {
-              "prompt": "subject_definitions:\n<Subject 1> is the person in <Picture 1>; preserve their appearance and clothing. <Picture 2> supplies the setting.\n\nsummary:\nA continuous music-video performance, segment 3 of three.\n\nretention_analysis:\nPreserve the reference subject's identity and the setting. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> performs in the setting from <Picture 2>, with natural lip movements synchronized to the soundtrack. Continue the performance and camera movement, ending on a calm, expressive close-up.",
+              "prompt": "subject_definitions:\n<Subject 1> is the cat-eared girl shown in <Picture 1> and <Picture 2>. <Picture 1> is a close-up of her face; <Picture 2> shows her full outfit in a crouching, cat-like pose. She has long black hair with purple streaks in twin tails, black cat ears with purple insides, skull hair clips with purple ribbons, orange eyes, a black collar with a silver bell, a black lace-trimmed dress and black boots.\n\nsummary:\nA continuous, energetic pop-dance music video about a cat, segment 3 of three.\n\nretention_analysis:\nPreserve <Subject 1>'s face, hair, accessories and outfit from both references, and the plain grey concrete studio with its diagonal shadow from <Picture 2>. Continue the preceding movement naturally.\n\ndetailed_description:\n<Subject 1> steps toward the camera and finishes the line with a final paw pose. The camera settles into a close-up framed like <Picture 1>, her half-lidded, unimpressed expression held as the music continues.",
               "width": 1344,
               "height": 768,
               "length": 124,
@@ -6703,7 +6703,7 @@
         "extra": {}
       },
       {
-        "id": "d22b8dc5-31f1-4bae-81ad-f5ca7b906505",
+        "id": "8c4636f8-390e-4d08-8e49-a1fad54f3ee6",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -6734,7 +6734,7 @@
         },
         "inputs": [
           {
-            "id": "69239bb8-a6c8-4dba-bcc6-9205e9564c8f",
+            "id": "7322a0f6-0352-4b5f-8b21-8be9b342feda",
             "name": "clip_1_frames_5_plus_17n",
             "type": "INT",
             "linkIds": [
@@ -6746,7 +6746,7 @@
             ]
           },
           {
-            "id": "ebdd5401-77c0-4590-b1ac-324a2ff9d66f",
+            "id": "711a86da-702a-4f37-89ef-0557ae0b32f5",
             "name": "clip_2_new_frames_multiple_of_17",
             "type": "INT",
             "linkIds": [
@@ -6758,7 +6758,7 @@
             ]
           },
           {
-            "id": "a08bbcdc-808e-4a7b-b08f-23720e2e5ca8",
+            "id": "235c855f-6bbf-42ea-8779-f157351e71cb",
             "name": "clip_3_new_frames_multiple_of_17",
             "type": "INT",
             "linkIds": [
@@ -6772,7 +6772,7 @@
         ],
         "outputs": [
           {
-            "id": "13384ded-cac8-4258-b4f7-7320b50d7998",
+            "id": "c47a188e-f7df-4cbf-aee1-63480bf23828",
             "name": "INT",
             "type": "INT",
             "linkIds": [
@@ -6786,7 +6786,7 @@
             ]
           },
           {
-            "id": "c23e4363-3a01-4bbc-ba8c-b4f1e837f5fd",
+            "id": "8ffa2ed1-37f9-45a0-81c2-029a7b755fbf",
             "name": "INT_1",
             "type": "INT",
             "linkIds": [
@@ -6800,7 +6800,7 @@
             ]
           },
           {
-            "id": "81f86835-5321-405a-804f-6089122e0626",
+            "id": "334e1a18-7f5a-4221-8392-775de6e722b0",
             "name": "INT_2",
             "type": "INT",
             "linkIds": [
@@ -6814,7 +6814,7 @@
             ]
           },
           {
-            "id": "7bb1e413-7122-42c5-be02-33dd482c9c76",
+            "id": "48a36d08-942f-4ebd-8cc2-338da23bcc14",
             "name": "FLOAT",
             "type": "FLOAT",
             "linkIds": [
@@ -7148,7 +7148,7 @@
         "extra": {}
       },
       {
-        "id": "c4d07452-fec6-44b9-99ac-ef4d5566c74d",
+        "id": "7b24e64c-cf34-4b0b-88a2-2e926f8147d5",
         "version": 1,
         "state": {
           "lastGroupId": 15,
@@ -7179,7 +7179,7 @@
         },
         "inputs": [
           {
-            "id": "a053f78f-ac37-45a4-97e0-421e7828ae5e",
+            "id": "c436504b-f403-4d8d-856a-f9a1832ff3b9",
             "name": "audio",
             "type": "AUDIO",
             "linkIds": [
@@ -7193,7 +7193,7 @@
             ]
           },
           {
-            "id": "76bc5713-d185-4631-9a50-72a10d28fe49",
+            "id": "cc7a3117-153b-4de2-ab94-bccd83c3dac6",
             "name": "duration",
             "type": "FLOAT",
             "linkIds": [
@@ -7206,7 +7206,7 @@
             ]
           },
           {
-            "id": "20339fce-a1de-4bb1-a938-f8335e202ef9",
+            "id": "5994977d-0a05-4f6c-9f80-dfd318b18b68",
             "name": "diffusion_model",
             "type": "COMBO",
             "linkIds": [
@@ -7218,7 +7218,7 @@
             ]
           },
           {
-            "id": "b4a5a881-08be-4110-af0b-471e685a28fc",
+            "id": "6fe6590b-940f-46b8-b0c4-e574354ba6d1",
             "name": "weight_dtype",
             "type": "COMBO",
             "linkIds": [
@@ -7230,7 +7230,7 @@
             ]
           },
           {
-            "id": "8db51709-8dfd-45f5-85d0-8489cc1bdc86",
+            "id": "003eeffc-938b-4659-883b-e1bee8ae9bd1",
             "name": "text_vision_encoder",
             "type": "COMBO",
             "linkIds": [
@@ -7242,7 +7242,7 @@
             ]
           },
           {
-            "id": "2a312265-0f77-4f32-8138-12bd2a5bd276",
+            "id": "9207c7cb-8e0c-4be9-a4c9-014d1c1bb468",
             "name": "text_encoder_device",
             "type": "COMBO",
             "linkIds": [
@@ -7254,7 +7254,7 @@
             ]
           },
           {
-            "id": "2bbe1eb2-83b8-42b6-a88a-4e9a584759b3",
+            "id": "a883ff31-0274-4218-8319-e58f0b7793dd",
             "name": "video_vae",
             "type": "COMBO",
             "linkIds": [
@@ -7266,7 +7266,7 @@
             ]
           },
           {
-            "id": "58e30c70-c8e9-41f6-99ab-3ba6d58a555a",
+            "id": "d2149d53-de25-4f41-bba8-79c2b67bff4d",
             "name": "audio_vae",
             "type": "COMBO",
             "linkIds": [
@@ -7278,7 +7278,7 @@
             ]
           },
           {
-            "id": "0c62c6a0-db4f-42a9-941b-337ff55f836e",
+            "id": "577816ab-1cc5-4eff-865f-cc6b91a16ec3",
             "name": "attention_backend",
             "type": "COMBO",
             "linkIds": [
@@ -7290,7 +7290,7 @@
             ]
           },
           {
-            "id": "c0497b97-ff16-4a45-ae6a-c150b226edca",
+            "id": "7f40f289-3dee-4cd6-be98-2b56f37dfd09",
             "name": "video_shift",
             "type": "FLOAT",
             "linkIds": [
@@ -7302,7 +7302,7 @@
             ]
           },
           {
-            "id": "07a42c3c-874f-4794-b9bc-8bfe5569c107",
+            "id": "01b71698-6ec9-4ae0-b3af-f77f323d58ff",
             "name": "audio_shift",
             "type": "FLOAT",
             "linkIds": [
@@ -7314,7 +7314,7 @@
             ]
           },
           {
-            "id": "919f52ea-5238-4d79-a37b-4df6f02bd37c",
+            "id": "e9c9029d-9c19-4074-b4c8-0dfbeea70684",
             "name": "width_multiple_of_32",
             "type": "INT",
             "linkIds": [
@@ -7326,7 +7326,7 @@
             ]
           },
           {
-            "id": "2143ab02-578b-4b55-a287-d35c5f9dd494",
+            "id": "e9ce9439-09ec-496b-b076-dd820fed7b92",
             "name": "height_multiple_of_32",
             "type": "INT",
             "linkIds": [
@@ -7338,7 +7338,7 @@
             ]
           },
           {
-            "id": "dcabe197-df41-4b03-86e6-ea5426dda910",
+            "id": "ed1e9e82-efd5-4a78-b37c-47277b5a60d6",
             "name": "hidden_overlap_5_plus_17n",
             "type": "INT",
             "linkIds": [
@@ -7350,7 +7350,7 @@
             ]
           },
           {
-            "id": "75085e1f-bb4c-468b-b9f6-3f1d9038b555",
+            "id": "1fc2e94f-7844-48dd-8745-b30f2da588ac",
             "name": "song_offset_seconds",
             "type": "FLOAT",
             "linkIds": [
@@ -7362,7 +7362,7 @@
             ]
           },
           {
-            "id": "ffdbeb2c-68ab-4d2b-9f60-03f4a07fcaf3",
+            "id": "dc53fe47-e403-4dcb-b129-3d909db14555",
             "name": "sampler",
             "type": "COMBO",
             "linkIds": [
@@ -7374,7 +7374,7 @@
             ]
           },
           {
-            "id": "a7e3830d-2888-4c3b-a5fc-86edff120bb5",
+            "id": "70ec3b56-8a05-4dfc-a16a-2ee176af30a4",
             "name": "scheduler",
             "type": "COMBO",
             "linkIds": [
@@ -7386,7 +7386,7 @@
             ]
           },
           {
-            "id": "433b1c53-0d1e-4c98-8738-92abf0fd27a5",
+            "id": "41a972c1-5a0d-46d6-81ae-ae76eefa5a38",
             "name": "steps",
             "type": "INT",
             "linkIds": [
@@ -7398,7 +7398,7 @@
             ]
           },
           {
-            "id": "405e2446-cc71-4550-8ddf-3d3c14ad627b",
+            "id": "e0625c25-b107-452e-997a-f52db9119e8f",
             "name": "denoise",
             "type": "FLOAT",
             "linkIds": [
@@ -7412,7 +7412,7 @@
         ],
         "outputs": [
           {
-            "id": "94bb18b3-2eea-4d31-8531-4be3601bbf0c",
+            "id": "68b44869-8298-4306-8b37-3aad12566f4c",
             "name": "MODEL",
             "type": "MODEL",
             "linkIds": [
@@ -7426,7 +7426,7 @@
             ]
           },
           {
-            "id": "6be1df5a-8fdb-4ffd-94d2-466fa9b09792",
+            "id": "2480d825-80d1-429a-9f4d-bfe04554da67",
             "name": "CLIP",
             "type": "CLIP",
             "linkIds": [
@@ -7440,7 +7440,7 @@
             ]
           },
           {
-            "id": "3d4b3cb7-7c60-493d-88e5-efacaea5b55e",
+            "id": "f191cfc1-2898-436c-84f3-09a816ae4242",
             "name": "VAE",
             "type": "VAE",
             "linkIds": [
@@ -7454,7 +7454,7 @@
             ]
           },
           {
-            "id": "2b5d01b2-d462-4792-8ce8-81597d2857f0",
+            "id": "2aa8937b-291f-450e-a62b-74fa59c5c36c",
             "name": "VAE_1",
             "type": "VAE",
             "linkIds": [
@@ -7468,7 +7468,7 @@
             ]
           },
           {
-            "id": "359621bb-e4f8-4f36-89a0-44b25af2cc0b",
+            "id": "2c155eb5-ac4c-40e8-a23a-b896735a50c9",
             "name": "INT",
             "type": "INT",
             "linkIds": [
@@ -7482,7 +7482,7 @@
             ]
           },
           {
-            "id": "92e0c514-0da7-4106-bdc6-3db5ac098776",
+            "id": "fb40a0ef-1265-4fc0-85cf-87974433fbbf",
             "name": "INT_1",
             "type": "INT",
             "linkIds": [
@@ -7496,7 +7496,7 @@
             ]
           },
           {
-            "id": "9bed7280-a8d4-4d15-99cf-24f694381e30",
+            "id": "2abcd225-6a0f-43d3-a626-263490db3cdb",
             "name": "INT_2",
             "type": "INT",
             "linkIds": [
@@ -7510,7 +7510,7 @@
             ]
           },
           {
-            "id": "701f4451-3189-45a7-b1af-70af828472c6",
+            "id": "21e4610d-696e-4099-a29d-0da1401d8bc0",
             "name": "SAMPLER",
             "type": "SAMPLER",
             "linkIds": [
@@ -7524,7 +7524,7 @@
             ]
           },
           {
-            "id": "e7b23c7e-50a2-4503-a269-2b20686b707c",
+            "id": "cc10ed9c-bda5-4944-acdb-ac5913997514",
             "name": "SIGMAS",
             "type": "SIGMAS",
             "linkIds": [
@@ -7538,7 +7538,7 @@
             ]
           },
           {
-            "id": "c580da67-4522-47b5-a62a-5129f5504838",
+            "id": "e89cfc0e-4703-4d81-ac9f-f195a0f28235",
             "name": "MASK",
             "type": "MASK",
             "linkIds": [
@@ -7552,7 +7552,7 @@
             ]
           },
           {
-            "id": "72a04792-bdef-48fa-9b06-8e1104d56dd9",
+            "id": "1737eea8-46f0-452f-a87e-1217a2c71d50",
             "name": "LATENT",
             "type": "LATENT",
             "linkIds": [
@@ -7566,7 +7566,7 @@
             ]
           },
           {
-            "id": "75947002-3429-4fdb-942e-24590102ebc8",
+            "id": "e8082b5f-e5bc-4dd8-997f-6a7a822fb92b",
             "name": "AUDIO",
             "type": "AUDIO",
             "linkIds": [
