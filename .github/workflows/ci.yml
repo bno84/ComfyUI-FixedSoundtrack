@@ -19,6 +19,8 @@ env:
   COMFYUI_REF: v0.38.0
   # Release 0.6.3; the Registry only offers 0.1.0, which lacks these nodes.
   H3_CONTINUATION_REF: e1768d5fdfc6f9519d2090dcf78458c2d9625f80
+  # The template saves with Video Finish's VideoFinishSaveVideo.
+  VIDEOFINISH_REF: 92d0f8b16bd104784bda8dfe6cbae8852dd39392
 
 jobs:
   checks:
@@ -65,7 +67,7 @@ jobs:
       - uses: actions/setup-python@v7
         with:
           python-version: ${{ matrix.python }}
-      - name: Install ComfyUI with CPU PyTorch and the continuation pack
+      - name: Install ComfyUI with CPU PyTorch, the continuation pack and Video Finish
         run: |
           git clone --depth 1 --branch "$COMFYUI_REF" https://github.com/Comfy-Org/ComfyUI.git comfyui
           pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
@@ -75,6 +77,10 @@ jobs:
           git init -q "$continuation"
           git -C "$continuation" fetch -q --depth 1 https://github.com/ttulttul/ComfyUI-Minimax-H3-Continuation.git "$H3_CONTINUATION_REF"
           git -C "$continuation" checkout -q FETCH_HEAD
+          videofinish=comfyui/custom_nodes/ComfyUI-VideoFinish
+          git init -q "$videofinish"
+          git -C "$videofinish" fetch -q --depth 1 https://github.com/bno84/ComfyUI-VideoFinish.git "$VIDEOFINISH_REF"
+          git -C "$videofinish" checkout -q FETCH_HEAD
       - name: Unit and integration tests
         working-directory: comfyui/custom_nodes/ComfyUI-FixedSoundtrack
         env:
@@ -85,7 +91,8 @@ jobs:
           python pack/.github/scripts/comfyui_smoke.py comfyui
           --pack ComfyUI-FixedSoundtrack --cnr-id comfyui-fixedsoundtrack
           --dependency comfyui-minimax-h3-continuation=ComfyUI-Minimax-H3-Continuation
-          --node H3AudioTimelineSlice --node FixedSoundtrackSaveVideo
+          --dependency comfyui-videofinish=ComfyUI-VideoFinish
+          --node H3AudioTimelineSlice --node VideoFinishSaveVideo
           --workflow "pack/example_workflows/FixedSoundtrack - H3 Ref2VA 3 clips.json"
 
   publish:

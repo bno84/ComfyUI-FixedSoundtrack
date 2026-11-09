@@ -8,9 +8,8 @@ own module; prefix model-independent nodes with `FixedSoundtrack`. Do not
 modify or monkeypatch ComfyUI-Minimax-H3-Continuation; the template uses it
 unchanged. Masking, latent encoding and sampling stay in standard nodes.
 
-`FixedSoundtrackSaveVideo` encodes in-process with PyAV, like core Save Video:
-no ffmpeg executable, subprocesses or scratch files. Keep it that way; its
-tests fail if anything starts a process.
+Saving lives in ComfyUI-VideoFinish (`VideoFinishSaveVideo`); the template
+uses it. Do not add a saver or encoder here.
 
 Workflows in `example_workflows/` are tracked directly. Edit them in ComfyUI
 and commit the exported editor JSON, including native subgraphs and layout.

@@ -14,7 +14,8 @@ is used as the final soundtrack.
 - **ComfyUI-Manager:** search for _Fixed Soundtrack_ (`comfyui-fixedsoundtrack`).
 - **comfy-cli:** `comfy node install comfyui-fixedsoundtrack`.
 
-Requires ComfyUI **0.38.0+** and
+Requires ComfyUI **0.38.0+**,
+[Video Finish](https://github.com/bno84/ComfyUI-VideoFinish) (`comfyui-videofinish`) for saving, and
 [ComfyUI-Minimax-H3-Continuation](https://github.com/ttulttul/ComfyUI-Minimax-H3-Continuation)
 **0.6.3+**. Install the continuation pack from Git or choose _nightly_ in
 ComfyUI-Manager ([Registry version issue](https://github.com/ttulttul/ComfyUI-Minimax-H3-Continuation/issues/3)).
@@ -40,18 +41,19 @@ clip's audio tail through the hidden overlap. It validates timing without
 encoding or sampling. Follow it with **Set Latent Noise Mask** (zero) and
 **LTXV Concat AV Latent**, as shown in the template.
 
-## Save Video (Fixed Soundtrack)
+## Saving
 
-An alternative to core **Save Video** with additional codec choices:
+The template saves with **Save Video (VideoFinish)** from
+[Video Finish](https://github.com/bno84/ComfyUI-VideoFinish): H.265 CRF 18 and
+Opus 128 kbit/s in MP4. Choose FLAC for lossless 24-bit audio, e.g. for a
+working copy. To upscale or interpolate the result, connect the saver's
+`video` output to Video Finish's **process and save** node, as its README
+shows.
 
-| Container | Video | Audio |
-| --- | --- | --- |
-| `mp4`, `mkv` | `h264`, `h265`, `av1` | `flac`, `opus`, `aac` |
-| `webm` | `av1` | `opus` |
-
-The template defaults to H.265 + Opus in MP4, CRF 18 and 128 kbit/s audio.
-Choose FLAC for lossless 24-bit audio. Set video quality with `crf` or
-`video_bitrate_kbps`; `audio_bitrate_kbps` controls AAC and Opus.
+Version 0.2.0 removed **Save Video (Fixed Soundtrack)**
+(`FixedSoundtrackSaveVideo`); its encoder moved to Video Finish. In a workflow
+from 0.1.0, replace that node with Save Video (VideoFinish). The settings
+carry over, and the new node adds `suffix` and `preset` widgets.
 
 ## Development
 

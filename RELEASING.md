@@ -11,6 +11,13 @@ pass.
   update the workflow in `example_workflows/` and its thumbnail.
 - Add a template screenshot to `docs/` and the README.
 
+## Video Finish dependency
+
+The template saves with Video Finish's `VideoFinishSaveVideo`. CI installs
+Video Finish at `VIDEOFINISH_REF`, which must be a pushed commit of
+`bno84/ComfyUI-VideoFinish`. Publish a Video Finish version with that node
+before a Fixed Soundtrack release that needs it.
+
 ## One-time setup
 
 Create a personal access token on the Registry publisher page. Add it to this

@@ -387,7 +387,7 @@
     },
     {
       "id": 76,
-      "type": "FixedSoundtrackSaveVideo",
+      "type": "VideoFinishSaveVideo",
       "pos": [
         2211,
         535
@@ -411,31 +411,40 @@
           "name": "video",
           "type": "VIDEO",
           "links": null
+        },
+        {
+          "name": "saved",
+          "type": "VIDEO",
+          "links": null
         }
       ],
       "title": "Save / preview joined music video",
       "properties": {
-        "Node name for S&R": "FixedSoundtrackSaveVideo",
-        "cnr_id": "comfyui-fixedsoundtrack",
+        "Node name for S&R": "VideoFinishSaveVideo",
+        "cnr_id": "comfyui-videofinish",
         "ver": "0.1.0"
       },
       "widgets_values": [
         "video/FixedSoundtrack/h3_three_clips",
+        "",
         "mp4",
         "h265",
         18,
         0,
         "auto",
+        "medium",
         "opus",
         128
       ],
       "widgets_values_named": {
         "filename_prefix": "video/FixedSoundtrack/h3_three_clips",
+        "suffix": "",
         "container": "mp4",
         "video_codec": "h265",
         "crf": 18,
         "video_bitrate_kbps": 0,
         "bit_depth": "auto",
+        "preset": "medium",
         "audio_codec": "opus",
         "audio_bitrate_kbps": 128
       }
